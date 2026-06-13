@@ -147,3 +147,64 @@
     color: var(--ink-soft);
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Motion — subtle, premium. Short reveal distances, eased entrances.
+   Transform + opacity only (GPU-accelerated). Honours reduced-motion.
+--------------------------------------------------------------------------- */
+:root {
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer components {
+  /* Hero choreography — staggered on first paint */
+  .hero-rise {
+    opacity: 0;
+    animation: fade-rise 0.7s var(--ease-out-expo) forwards;
+  }
+
+  /* Scroll reveal — initial state; .is-visible (set by IntersectionObserver) plays it */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.6s var(--ease-out-quart),
+      transform 0.6s var(--ease-out-quart);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hero-rise {
+    opacity: 1;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

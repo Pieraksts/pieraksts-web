@@ -4,29 +4,8 @@ import { cn } from "@/lib/utils";
 
 /**
  * App-inspired UI fragments recreated in HTML/CSS — no real screenshots, so they
- * never go stale while the mobile app evolves. Used by variant /two.
+ * never go stale while the mobile app evolves. Used on the landing showcase.
  */
-
-function PhoneFrame({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
-  return (
-    <div
-      className={cn(
-        "rounded-[2rem] border border-hairline bg-warm p-3 shadow-[0_20px_60px_-30px_rgba(26,22,18,0.45)]",
-        className
-      )}
-    >
-      <div className="overflow-hidden rounded-[1.4rem] border border-hairline bg-background">
-        {children}
-      </div>
-    </div>
-  );
-}
 
 /** A salon discovery card, like the marketplace list. */
 export function SalonCard({ className }: { className?: string }) {
@@ -180,15 +159,35 @@ export function OwnerDaySummary({ className }: { className?: string }) {
   );
 }
 
-/** Composed mosaic of the three fragments, used in the variant /two hero. */
+const STACK_SHADOW = "shadow-[0_24px_70px_-32px_rgba(26,22,18,0.5)]";
+
+/**
+ * A cascading deck of the three app fragments — all cards fully visible, each
+ * card's identity peeking from under the one in front. The deck gently spreads
+ * on hover. Used as the product showcase.
+ */
 export function AppUiMosaic({ className }: { className?: string }) {
   return (
-    <div className={cn("relative", className)}>
-      <PhoneFrame className="relative z-10 max-w-[300px]">
-        <SalonCard className="rounded-none border-0" />
-      </PhoneFrame>
-      <SlotPicker className="absolute -bottom-10 -right-2 z-20 hidden w-64 shadow-[0_20px_60px_-30px_rgba(26,22,18,0.45)] sm:block" />
-      <OwnerDaySummary className="absolute -left-6 -top-8 z-0 hidden w-72 opacity-95 shadow-[0_20px_60px_-30px_rgba(26,22,18,0.35)] lg:block" />
+    <div
+      className={cn(
+        "group relative mx-auto h-[470px] w-full max-w-[340px] sm:h-[540px] sm:max-w-[380px]",
+        className
+      )}
+    >
+      {/* Back — salon owner's day */}
+      <div className="absolute left-0 top-0 z-10 w-[230px] -rotate-[3deg] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform group-hover:-translate-x-3 group-hover:-translate-y-2 group-hover:-rotate-[5deg] sm:w-[270px]">
+        <OwnerDaySummary className={STACK_SHADOW} />
+      </div>
+
+      {/* Middle — salon discovery card */}
+      <div className="absolute left-7 top-24 z-20 w-[230px] rotate-[1.5deg] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform sm:left-12 sm:top-28 sm:w-[270px]">
+        <SalonCard className={STACK_SHADOW} />
+      </div>
+
+      {/* Front — booking slot picker */}
+      <div className="absolute left-14 top-56 z-30 w-[230px] rotate-[4deg] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform group-hover:translate-x-3 group-hover:translate-y-2 group-hover:rotate-[6deg] sm:left-24 sm:top-64 sm:w-[270px]">
+        <SlotPicker className={STACK_SHADOW} />
+      </div>
     </div>
   );
 }

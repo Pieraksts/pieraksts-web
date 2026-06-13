@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { VariantSwitcher } from "@/components/variant-switcher";
 import { site } from "@/lib/content";
 
 const manrope = Manrope({
@@ -51,7 +50,6 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}
-        <VariantSwitcher />
       </body>
     </html>
   );
