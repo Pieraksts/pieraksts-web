@@ -37,7 +37,9 @@ export function WaitlistCta({
         <Dialog.Content className="fixed left-1/2 top-1/2 z-50 w-[calc(100%-2rem)] max-w-md -translate-x-1/2 -translate-y-1/2 rounded-2xl border border-warm-border bg-background p-6 shadow-[0_24px_70px_-20px_rgba(26,22,18,0.45)] focus:outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=open]:fade-in data-[state=closed]:fade-out data-[state=open]:zoom-in-95 data-[state=closed]:zoom-out-95">
           <div className="mb-4 flex flex-col gap-1 pr-8">
             <Dialog.Title className="font-display text-xl font-extrabold tracking-tight text-foreground">
-              {t("title")}
+              {t.rich("title", {
+                brand: (chunks) => <span className="text-brand">{chunks}</span>,
+              })}
             </Dialog.Title>
             <Dialog.Description className="text-sm text-ink-muted">
               {t("subtitle")}

@@ -136,6 +136,15 @@
   html {
     @apply font-sans;
   }
+  /* Tailwind v4 no longer sets cursor:pointer on buttons. Restore it for all
+     interactive elements so every CTA and clickable control shows a pointer. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  label:has(input[type="radio"]),
+  label:has(input[type="checkbox"]),
+  summary {
+    cursor: pointer;
+  }
 }
 
 @layer components {

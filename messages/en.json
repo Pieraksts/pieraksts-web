@@ -81,7 +81,7 @@
   "waitlist": {
     "openClient": "Join the waitlist",
     "openOwner": "For salon owners",
-    "title": "Join the Pieraksts waitlist",
+    "title": "Join the <brand>Pieraksts</brand> waitlist",
     "subtitle": "Leave your email and we'll let you know the moment Pieraksts opens in Riga.",
     "emailLabel": "Email address",
     "emailPlaceholder": "you@example.com",
