@@ -39,6 +39,10 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
 
+  // lv is the default locale and is served without a URL prefix; en lives at /en.
+  const path = locale === routing.defaultLocale ? "/" : `/${locale}`;
+  const ogLocale = locale === "lv" ? "lv_LV" : "en_US";
+
   return {
     metadataBase: new URL(siteConfig.url),
     title: {
@@ -46,11 +50,48 @@ export async function generateMetadata({
       template: `%s · ${siteConfig.name}`,
     },
     description: t("description"),
+    applicationName: siteConfig.name,
+    keywords: t("keywords")
+      .split(",")
+      .map((k) => k.trim()),
+    alternates: {
+      canonical: path,
+      languages: {
+        lv: "/",
+        en: "/en",
+        "x-default": "/",
+      },
+    },
     openGraph: {
       title: t("title"),
       description: t("description"),
       type: "website",
-      locale,
+      url: path,
+      siteName: siteConfig.name,
+      locale: ogLocale,
+      images: [
+        {
+          url: "/brand/og.png",
+          width: 1200,
+          height: 630,
+          alt: t("title"),
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: ["/brand/og.png"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
     },
   };
 }
