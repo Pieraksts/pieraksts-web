@@ -1,9 +1,13 @@
+import { useTranslations } from "next-intl";
 import { BrandMark } from "@/components/brand-mark";
 import { LandingButton } from "@/components/landing-button";
-import { hero, site } from "@/lib/content";
+import { LanguageSwitcher } from "@/components/language-switcher";
+import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader({ className }: { className?: string }) {
+  const t = useTranslations("hero");
+
   return (
     <header
       className={cn(
@@ -11,19 +15,20 @@ export function SiteHeader({ className }: { className?: string }) {
         className
       )}
     >
-      <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 sm:px-8">
-        <BrandMark />
-        <div className="flex items-center gap-2">
+      <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-3 px-4 sm:px-8">
+        <BrandMark wordmarkClassName="hidden xs:inline-block" />
+        <div className="flex items-center gap-2 sm:gap-3">
+          <LanguageSwitcher />
           <LandingButton
-            href={site.ownerCtaHref}
+            href={siteConfig.ownerCtaHref}
             variant="ghost"
             size="md"
             className="hidden sm:inline-flex"
           >
-            {hero.secondaryCta}
+            {t("secondaryCta")}
           </LandingButton>
-          <LandingButton href={site.clientCtaHref} variant="primary" size="md">
-            {hero.primaryCta}
+          <LandingButton href={siteConfig.clientCtaHref} variant="primary" size="md">
+            {t("primaryCta")}
           </LandingButton>
         </div>
       </div>

@@ -6,50 +6,57 @@ care booking marketplace for Latvia, starting in Riga.
 > Make booking a salon as simple and fast as ordering a ride: no calls, no DMs,
 > real availability.
 
-Built with Next.js (App Router), TypeScript, Tailwind CSS v4, shadcn/ui, and
-`next/font` (Manrope for display, Inter for body) — mirroring the Expo app's
-brand system.
+Built with Next.js (App Router), TypeScript, Tailwind CSS v4, shadcn/ui,
+`next-intl` for localisation, and `next/font` (Manrope for display, Inter for
+body) — mirroring the Expo app's brand system.
 
-## Landing variants
+## Localisation (Latvian-first)
 
-Three landing-page variants are shipped side by side so the team can compare
-directions. A floating **variant switcher** (bottom-right of every page) hops
-between them.
+Uses **`next-intl`** with locale-prefixed routing. Latvian is the default and
+lives at the root with **no prefix**; English is served from `/en`.
 
-| Route    | Name                   | Concept                                                       |
-| -------- | ---------------------- | ------------------------------------------------------------ |
-| `/one`   | Riga-First Editorial   | Riga hero image, then calm sections. Local trust first.      |
-| `/two`   | Product UI Mosaic      | Shows the product via recreated app UI fragments (no shots). |
-| `/three` | Split-Audience Utility | Direct, documentation-calm page organised by role.           |
+| URL     | Locale  |
+| ------- | ------- |
+| `/`     | Latvian |
+| `/en`   | English |
+| `/lv`   | → redirects to `/` (default locale is never prefixed) |
 
-`/` redirects to `/one` (the default, set in `src/lib/variants.ts`).
+- Browser language detection is **off** — visitors always land on Latvian and
+  opt into English via the header switcher (`localeDetection: false` in
+  `src/i18n/routing.ts`). Flip it on there if you want Accept-Language detection.
+- A minimal **LV / EN switcher** sits in the header; switching keeps the user on
+  the same page.
+- All copy lives in `messages/lv.json` and `messages/en.json`.
 
 ## Project layout
 
 ```txt
+messages/
+  lv.json, en.json        # all translated copy (the source of truth)
 src/
+  i18n/
+    routing.ts            # locales, default, as-needed prefix, detection
+    navigation.ts         # locale-aware Link / useRouter / usePathname
+    request.ts            # loads messages per request
+  proxy.ts                # next-intl middleware (Next 16 "proxy" convention)
   app/
-    page.tsx              # redirects to the default variant
-    one|two|three/page.tsx
-    layout.tsx            # fonts + global variant switcher
+    [locale]/
+      layout.tsx          # fonts, <html lang>, NextIntlClientProvider, metadata
+      page.tsx            # the landing page
     globals.css           # brand tokens (mirrors constants/design-system.ts)
   components/
-    site-header.tsx
+    site-header.tsx       # brand, language switcher, CTAs
     site-footer.tsx
-    variant-switcher.tsx  # floating control (client component)
-    landing-button.tsx    # pill CTA
-    role-section.tsx
-    app-ui-mockups.tsx    # recreated app UI fragments for /two
+    language-switcher.tsx  # minimal LV / EN toggle (client)
+    landing-button.tsx     # pill CTA
+    reveal.tsx             # scroll-reveal wrapper (IntersectionObserver)
+    app-ui-mockups.tsx     # recreated app UI fragments (cascading card deck)
     section.tsx, brand-mark.tsx
     ui/button.tsx         # shadcn
   lib/
-    content.ts            # all landing copy + product facts (i18n-ready)
-    variants.ts           # variant registry + default
+    site-config.ts        # locale-independent constants (name, CTA mailtos)
 public/brand/             # logo, Riga hero, category tiles (copied from the app)
 ```
-
-All copy lives in `src/lib/content.ts` so the variants share one source of
-truth and i18n can be added later without touching JSX.
 
 ## Develop
 

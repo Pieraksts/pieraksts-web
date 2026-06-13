@@ -13,6 +13,9 @@
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-manrope);
 
+  /* Extra-small breakpoint for progressive reveal of compact chrome */
+  --breakpoint-xs: 26rem;
+
   /* Pieraksts brand tokens */
   --color-brand: var(--brand);
   --color-brand-strong: var(--brand-strong);

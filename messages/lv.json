@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "title": "Pieraksts — Skaistumkopšanas pieraksti Rīgā, bez zvaniem un ziņām",
+    "description": "Pieraksts palīdz klientiem atrast reālu salonu pieejamību un saloniem turēt pakalpojumus, speciālistus un pierakstus vienā mierīgā grafikā.",
+    "tagline": "Skaistumkopšanas pieraksti Rīgā, bez zvaniem un ziņām"
+  },
+  "site": {
+    "location": "Rīga, Latvija"
+  },
+  "language": {
+    "label": "Valoda",
+    "lv": "Latviešu",
+    "en": "Angļu"
+  },
+  "hero": {
+    "eyebrow": "Skaistumkopšana un aprūpe · Rīga",
+    "headline": "Skaistumkopšanas pieraksti Rīgā, bez zvaniem un ziņām",
+    "subhead": "Tikpat vienkārši un ātri kā pasūtīt braucienu: bez zvaniem, bez ziņām, reāla pieejamība. Atrodi salonus, izvēlies laiku un apstiprini dažos pieskārienos.",
+    "primaryCta": "Pieteikties gaidsarakstā",
+    "secondaryCta": "Salonu īpašniekiem",
+    "note": "Pievienošanās bez maksas · Norēķinies tieši salonā"
+  },
+  "showcase": {
+    "eyebrow": "Ko tu iegūsti",
+    "title": "Atklāšana, pieraksti un tava diena — vienā mierīgā lietotnē",
+    "body": "Bez zvaniem un ziņām. Klienti redz reālu pieejamību un piesakās dažos pieskārienos; saloni patur visus pierakstus vienā grafikā."
+  },
+  "audiences": {
+    "client": {
+      "eyebrow": "Klientiem",
+      "title": "Atrodi salonu un piesakies dažās minūtēs",
+      "description": "Atklāj salonus tuvumā, redzi reālu pieejamību un turi savu rutīnu vienuviet.",
+      "cta": "Pieteikties gaidsarakstā",
+      "points": [
+        "Atklāj salonus visā Rīgā pēc pakalpojuma",
+        "Redzi reālu pieejamību — bez sarakstes turp un atpakaļ",
+        "Piesakies vizītei un pārvaldi gaidāmos pierakstus",
+        "Turi mīļākos salonus viena pieskāriena attālumā"
+      ]
+    },
+    "owner": {
+      "eyebrow": "Salonu īpašniekiem",
+      "title": "Tavi pakalpojumi, speciālisti un pieraksti vienā mierīgā grafikā",
+      "description": "Iestati salonu vienreiz un pēc tam pārvaldi savu dienu, neturot telefonu pie auss.",
+      "cta": "Pievienot salonu",
+      "points": [
+        "Izveido salona profilu, pakalpojumus un darba laikus",
+        "Pievieno speciālistus un to, ko katrs piedāvā",
+        "Pārvaldi ienākošos pierakstus un pievieno manuālos",
+        "Bloķē brīvo laiku, lai grafiks vienmēr atbilst patiesībai"
+      ]
+    }
+  },
+  "flow": {
+    "eyebrow": "Pieraksta gaita",
+    "title": "Reāla pieejamība, izvēlēta dažās sekundēs",
+    "description": "Bez zvaniem un ziņām — klienti redz brīvos laikus pie speciālista un apstiprina.",
+    "trust": "Veidots Rīgas skaistumkopšanas saloniem · {location}"
+  },
+  "steps": [
+    {
+      "n": "01",
+      "title": "Atklāj",
+      "body": "Pārlūko Rīgas salonus pēc vēlamā pakalpojuma — no matu griezuma līdz manikīram."
+    },
+    {
+      "n": "02",
+      "title": "Izvēlies laiku",
+      "body": "Redzi reālu speciālista pieejamību un izvēlies laiku, kas tiešām der."
+    },
+    {
+      "n": "03",
+      "title": "Apstiprini",
+      "body": "Piesakies dažos pieskārienos. Gaidāmie pieraksti paliek vienuviet."
+    }
+  ],
+  "cta": {
+    "title": "Gatavs, tiklīdz Pieraksts atvērsies Rīgā"
+  },
+  "footer": {
+    "blurb": "Skaistumkopšanas un aprūpes pierakstu platforma Latvijai, sākot ar Rīgu.",
+    "note": "Drīzumā Rīgā.",
+    "rights": "© {year} {name} · {location}"
+  },
+  "mock": {
+    "today": "Šodien",
+    "summaryLine": "Trešd. 18. jūn. · 3 pieraksti",
+    "onTime": "Laikā",
+    "chooseTime": "Izvēlies laiku",
+    "with": "pie {name}",
+    "salonName": "Studio Carmine",
+    "rating": "4.9",
+    "salonMeta": "Centrs, Rīga · Mati un krāsošana",
+    "services": ["Griezums", "Balajāža", "Veidošana"],
+    "days": [
+      { "d": "Pr", "n": "16" },
+      { "d": "Ot", "n": "17" },
+      { "d": "Tr", "n": "18" },
+      { "d": "Ce", "n": "19" }
+    ],
+    "bookings": [
+      { "time": "10:00", "who": "Elīna K.", "svc": "Balajāža", "specialist": "Annas" },
+      { "time": "11:30", "who": "Marta B.", "svc": "Griezums un veidošana", "specialist": "Annas" },
+      { "time": "13:00", "who": "Bez pieraksta", "svc": "Manikīrs", "specialist": "Līgas" }
+    ]
+  }
+}

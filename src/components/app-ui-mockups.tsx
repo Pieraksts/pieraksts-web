@@ -1,14 +1,22 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Check, Clock, Heart, MapPin, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /**
  * App-inspired UI fragments recreated in HTML/CSS — no real screenshots, so they
  * never go stale while the mobile app evolves. Used on the landing showcase.
+ * Copy is localised under the `mock` namespace.
  */
+
+type Day = { d: string; n: string };
+type Booking = { time: string; who: string; svc: string; specialist: string };
 
 /** A salon discovery card, like the marketplace list. */
 export function SalonCard({ className }: { className?: string }) {
+  const t = useTranslations("mock");
+  const services = t.raw("services") as string[];
+
   return (
     <div
       className={cn(
@@ -19,7 +27,7 @@ export function SalonCard({ className }: { className?: string }) {
       <div className="relative h-32 w-full">
         <Image
           src="/brand/category-tiles/hair.jpg"
-          alt="Salon"
+          alt={t("salonName")}
           fill
           sizes="(max-width: 768px) 100vw, 360px"
           className="object-cover"
@@ -31,19 +39,19 @@ export function SalonCard({ className }: { className?: string }) {
       <div className="flex flex-col gap-1.5 p-4">
         <div className="flex items-center justify-between">
           <span className="font-display text-[0.95rem] font-bold tracking-tight text-foreground">
-            Studio Carmine
+            {t("salonName")}
           </span>
           <span className="inline-flex items-center gap-1 text-sm text-ink-muted">
             <Star className="size-3.5 fill-current text-ink-soft" />
-            4.9
+            {t("rating")}
           </span>
         </div>
         <span className="inline-flex items-center gap-1.5 text-sm text-ink-muted">
           <MapPin className="size-3.5" />
-          Centrs, Riga · Hair & colour
+          {t("salonMeta")}
         </span>
         <div className="mt-1 flex flex-wrap gap-1.5">
-          {["Cut", "Balayage", "Styling"].map((s) => (
+          {services.map((s) => (
             <span
               key={s}
               className="rounded-full bg-brand-soft px-2.5 py-1 text-xs font-medium text-brand-strong"
@@ -59,12 +67,8 @@ export function SalonCard({ className }: { className?: string }) {
 
 /** A booking slot picker, like the time-selection step. */
 export function SlotPicker({ className }: { className?: string }) {
-  const days = [
-    { d: "Mon", n: "16" },
-    { d: "Tue", n: "17" },
-    { d: "Wed", n: "18" },
-    { d: "Thu", n: "19" },
-  ];
+  const t = useTranslations("mock");
+  const days = t.raw("days") as Day[];
   const slots = ["10:00", "11:30", "13:00", "14:30", "16:00", "17:30"];
   return (
     <div
@@ -73,7 +77,7 @@ export function SlotPicker({ className }: { className?: string }) {
         className
       )}
     >
-      <p className="eyebrow mb-3">Choose a time</p>
+      <p className="eyebrow mb-3">{t("chooseTime")}</p>
       <div className="grid grid-cols-4 gap-2">
         {days.map((day, i) => (
           <div
@@ -111,11 +115,8 @@ export function SlotPicker({ className }: { className?: string }) {
 
 /** A salon owner's day summary, like the owner schedule. */
 export function OwnerDaySummary({ className }: { className?: string }) {
-  const bookings = [
-    { time: "10:00", who: "Elīna K.", svc: "Balayage", specialist: "Anna" },
-    { time: "11:30", who: "Marta B.", svc: "Cut & style", specialist: "Anna" },
-    { time: "13:00", who: "Walk-in", svc: "Manicure", specialist: "Līga" },
-  ];
+  const t = useTranslations("mock");
+  const bookings = t.raw("bookings") as Booking[];
   return (
     <div
       className={cn(
@@ -125,14 +126,14 @@ export function OwnerDaySummary({ className }: { className?: string }) {
     >
       <div className="mb-3 flex items-center justify-between">
         <div className="flex flex-col">
-          <p className="eyebrow">Today</p>
+          <p className="eyebrow">{t("today")}</p>
           <span className="font-display text-sm font-bold tracking-tight text-foreground">
-            Wed 18 June · 3 bookings
+            {t("summaryLine")}
           </span>
         </div>
-        <span className="inline-flex items-center gap-1 rounded-full bg-brand-soft px-2.5 py-1 text-xs font-medium text-brand-strong">
+        <span className="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full bg-brand-soft px-2.5 py-1 text-xs font-medium text-brand-strong">
           <Clock className="size-3" />
-          On time
+          {t("onTime")}
         </span>
       </div>
       <ul className="flex flex-col gap-2">
@@ -149,7 +150,9 @@ export function OwnerDaySummary({ className }: { className?: string }) {
               <span className="truncate text-sm font-medium text-foreground">
                 {b.who} · {b.svc}
               </span>
-              <span className="text-xs text-ink-soft">with {b.specialist}</span>
+              <span className="text-xs text-ink-soft">
+                {t("with", { name: b.specialist })}
+              </span>
             </span>
             <Check className="size-4 text-ink-soft" />
           </li>
