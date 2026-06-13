@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pieraksts — Web Landing
 
-## Getting Started
+Marketing / landing site for **Pieraksts**, a mobile-first beauty and personal
+care booking marketplace for Latvia, starting in Riga.
 
-First, run the development server:
+> Make booking a salon as simple and fast as ordering a ride: no calls, no DMs,
+> real availability.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Built with Next.js (App Router), TypeScript, Tailwind CSS v4, shadcn/ui, and
+`next/font` (Manrope for display, Inter for body) — mirroring the Expo app's
+brand system.
+
+## Landing variants
+
+Three landing-page variants are shipped side by side so the team can compare
+directions. A floating **variant switcher** (bottom-right of every page) hops
+between them.
+
+| Route    | Name                   | Concept                                                       |
+| -------- | ---------------------- | ------------------------------------------------------------ |
+| `/one`   | Riga-First Editorial   | Riga hero image, then calm sections. Local trust first.      |
+| `/two`   | Product UI Mosaic      | Shows the product via recreated app UI fragments (no shots). |
+| `/three` | Split-Audience Utility | Direct, documentation-calm page organised by role.           |
+
+`/` redirects to `/one` (the default, set in `src/lib/variants.ts`).
+
+## Project layout
+
+```txt
+src/
+  app/
+    page.tsx              # redirects to the default variant
+    one|two|three/page.tsx
+    layout.tsx            # fonts + global variant switcher
+    globals.css           # brand tokens (mirrors constants/design-system.ts)
+  components/
+    site-header.tsx
+    site-footer.tsx
+    variant-switcher.tsx  # floating control (client component)
+    landing-button.tsx    # pill CTA
+    role-section.tsx
+    app-ui-mockups.tsx    # recreated app UI fragments for /two
+    section.tsx, brand-mark.tsx
+    ui/button.tsx         # shadcn
+  lib/
+    content.ts            # all landing copy + product facts (i18n-ready)
+    variants.ts           # variant registry + default
+public/brand/             # logo, Riga hero, category tiles (copied from the app)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+All copy lives in `src/lib/content.ts` so the variants share one source of
+truth and i18n can be added later without touching JSX.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Develop
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev      # http://localhost:3000
+npm run lint
+npm run build
+```
 
-## Learn More
+## Deploy
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Targeted at Vercel with the purchased domain `pieraksts.app`; SSL is handled by
+Vercel after the domain is assigned. No backend secrets live in this repo —
+waitlist / "list your salon" CTAs currently use `mailto:` and should be swapped
+for a real form when available.
