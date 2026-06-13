@@ -86,7 +86,7 @@
     "emailLabel": "E-pasta adrese",
     "emailPlaceholder": "tu@piemers.lv",
     "roleLabel": "Mani interesē kā…",
-    "roleClient": "Klientu, kas piesakās salonos",
+    "roleClient": "Klientu",
     "roleOwner": "Salona īpašnieku",
     "roleBoth": "Abus",
     "marketingLabel": "Sūtīt man arī retas ziņas par jaunumiem un piedāvājumiem (neobligāti).",
@@ -129,9 +129,24 @@
       { "d": "Ce", "n": "19" }
     ],
     "bookings": [
-      { "time": "10:00", "who": "Elīna K.", "svc": "Balajāža", "specialist": "Annas" },
-      { "time": "11:30", "who": "Marta B.", "svc": "Griezums un veidošana", "specialist": "Annas" },
-      { "time": "13:00", "who": "Bez pieraksta", "svc": "Manikīrs", "specialist": "Līgas" }
+      {
+        "time": "10:00",
+        "who": "Elīna K.",
+        "svc": "Balajāža",
+        "specialist": "Annas"
+      },
+      {
+        "time": "11:30",
+        "who": "Marta B.",
+        "svc": "Griezums un veidošana",
+        "specialist": "Annas"
+      },
+      {
+        "time": "13:00",
+        "who": "Bez pieraksta",
+        "svc": "Manikīrs",
+        "specialist": "Līgas"
+      }
     ]
   }
 }
