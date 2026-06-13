@@ -42,7 +42,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
               "rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wide transition-colors",
               active
                 ? "bg-foreground text-background"
-                : "text-ink-muted hover:text-foreground"
+                : "cursor-pointer text-ink-muted hover:text-foreground"
             )}
           >
             {l}
