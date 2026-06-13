@@ -86,7 +86,7 @@
     "emailLabel": "Email address",
     "emailPlaceholder": "you@example.com",
     "roleLabel": "I'm interested as a…",
-    "roleClient": "Client booking salons",
+    "roleClient": "Client",
     "roleOwner": "Salon owner",
     "roleBoth": "Both",
     "marketingLabel": "Also email me occasional product news and offers (optional).",
@@ -129,9 +129,24 @@
       { "d": "Thu", "n": "19" }
     ],
     "bookings": [
-      { "time": "10:00", "who": "Elīna K.", "svc": "Balayage", "specialist": "Anna" },
-      { "time": "11:30", "who": "Marta B.", "svc": "Cut & style", "specialist": "Anna" },
-      { "time": "13:00", "who": "Walk-in", "svc": "Manicure", "specialist": "Līga" }
+      {
+        "time": "10:00",
+        "who": "Elīna K.",
+        "svc": "Balayage",
+        "specialist": "Anna"
+      },
+      {
+        "time": "11:30",
+        "who": "Marta B.",
+        "svc": "Cut & style",
+        "specialist": "Anna"
+      },
+      {
+        "time": "13:00",
+        "who": "Walk-in",
+        "svc": "Manicure",
+        "specialist": "Līga"
+      }
     ]
   }
 }
