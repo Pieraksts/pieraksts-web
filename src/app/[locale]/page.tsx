@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Section, SectionHeading, Eyebrow } from "@/components/section";
-import { LandingButton } from "@/components/landing-button";
+import { WaitlistCta } from "@/components/waitlist-cta";
 import { Reveal } from "@/components/reveal";
 import {
   AppUiMosaic,
@@ -11,7 +11,6 @@ import {
   SalonCard,
   SlotPicker,
 } from "@/components/app-ui-mockups";
-import { siteConfig } from "@/lib/site-config";
 
 type Step = { n: string; title: string; body: string };
 
@@ -63,20 +62,18 @@ export default async function Home({
             className="hero-rise mt-2 flex flex-col gap-3 sm:flex-row"
             style={{ animationDelay: "240ms" }}
           >
-            <LandingButton
-              href={siteConfig.clientCtaHref}
+            <WaitlistCta
+              role="client"
+              label={t("hero.primaryCta")}
               variant="brand"
               className="transition-transform hover:-translate-y-0.5"
-            >
-              {t("hero.primaryCta")}
-            </LandingButton>
-            <LandingButton
-              href={siteConfig.ownerCtaHref}
+            />
+            <WaitlistCta
+              role="salon_owner"
+              label={t("hero.secondaryCta")}
               variant="outline"
               className="border-white/30 bg-white/10 text-white backdrop-blur-sm transition-transform hover:-translate-y-0.5 hover:bg-white/20"
-            >
-              {t("hero.secondaryCta")}
-            </LandingButton>
+            />
           </div>
           <p className="hero-rise text-sm text-white/70" style={{ animationDelay: "320ms" }}>
             {t("hero.note")}
@@ -96,22 +93,20 @@ export default async function Home({
               {t("showcase.body")}
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <LandingButton
-                href={siteConfig.clientCtaHref}
+              <WaitlistCta
+                role="client"
+                label={t("hero.primaryCta")}
                 variant="primary"
                 size="md"
                 className="transition-transform hover:-translate-y-0.5"
-              >
-                {t("hero.primaryCta")}
-              </LandingButton>
-              <LandingButton
-                href={siteConfig.ownerCtaHref}
+              />
+              <WaitlistCta
+                role="salon_owner"
+                label={t("hero.secondaryCta")}
                 variant="outline"
                 size="md"
                 className="transition-transform hover:-translate-y-0.5"
-              >
-                {t("hero.secondaryCta")}
-              </LandingButton>
+              />
             </div>
           </Reveal>
           <Reveal delay={120} className="flex justify-center lg:justify-end">
@@ -216,20 +211,18 @@ export default async function Home({
         <Reveal className="flex flex-col items-center gap-5 text-center">
           <SectionHeading className="items-center text-center" title={t("cta.title")} />
           <div className="flex flex-col gap-3 sm:flex-row">
-            <LandingButton
-              href={siteConfig.clientCtaHref}
+            <WaitlistCta
+              role="client"
+              label={t("hero.primaryCta")}
               variant="primary"
               className="transition-transform hover:-translate-y-0.5"
-            >
-              {t("hero.primaryCta")}
-            </LandingButton>
-            <LandingButton
-              href={siteConfig.ownerCtaHref}
+            />
+            <WaitlistCta
+              role="salon_owner"
+              label={t("audiences.owner.cta")}
               variant="outline"
               className="transition-transform hover:-translate-y-0.5"
-            >
-              {t("audiences.owner.cta")}
-            </LandingButton>
+            />
           </div>
         </Reveal>
       </Section>

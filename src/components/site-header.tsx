@@ -1,8 +1,7 @@
 import { useTranslations } from "next-intl";
 import { BrandMark } from "@/components/brand-mark";
-import { LandingButton } from "@/components/landing-button";
+import { WaitlistCta } from "@/components/waitlist-cta";
 import { LanguageSwitcher } from "@/components/language-switcher";
-import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader({ className }: { className?: string }) {
@@ -19,17 +18,19 @@ export function SiteHeader({ className }: { className?: string }) {
         <BrandMark wordmarkClassName="hidden xs:inline-block" />
         <div className="flex items-center gap-2 sm:gap-3">
           <LanguageSwitcher />
-          <LandingButton
-            href={siteConfig.ownerCtaHref}
+          <WaitlistCta
+            role="salon_owner"
+            label={t("secondaryCta")}
             variant="ghost"
             size="md"
             className="hidden sm:inline-flex"
-          >
-            {t("secondaryCta")}
-          </LandingButton>
-          <LandingButton href={siteConfig.clientCtaHref} variant="primary" size="md">
-            {t("primaryCta")}
-          </LandingButton>
+          />
+          <WaitlistCta
+            role="client"
+            label={t("primaryCta")}
+            variant="primary"
+            size="md"
+          />
         </div>
       </div>
     </header>

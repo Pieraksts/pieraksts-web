@@ -78,10 +78,39 @@
   "cta": {
     "title": "Ready when Pieraksts opens in Riga"
   },
+  "waitlist": {
+    "openClient": "Join the waitlist",
+    "openOwner": "For salon owners",
+    "title": "Join the Pieraksts waitlist",
+    "subtitle": "Leave your email and we'll let you know the moment Pieraksts opens in Riga.",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "roleLabel": "I'm interested as a…",
+    "roleClient": "Client booking salons",
+    "roleOwner": "Salon owner",
+    "roleBoth": "Both",
+    "marketingLabel": "Also email me occasional product news and offers (optional).",
+    "consentNote": "By joining, you agree that we store your email to notify you about the Pieraksts launch in Riga. You can unsubscribe at any time. See our <privacy>Privacy Policy</privacy>.",
+    "submit": "Join the waitlist",
+    "submitting": "Joining…",
+    "successTitle": "You're on the list!",
+    "successBody": "Thanks — we'll email you when Pieraksts opens in Riga.",
+    "errorEmail": "Please enter a valid email address.",
+    "errorGeneric": "Something went wrong. Please try again in a moment.",
+    "close": "Close"
+  },
+  "legal": {
+    "termsTitle": "Terms of Service",
+    "privacyTitle": "Privacy Policy",
+    "effectiveDate": "Effective date: {date}",
+    "backHome": "Back to home"
+  },
   "footer": {
     "blurb": "A beauty and personal care booking marketplace for Latvia, starting in Riga.",
     "note": "Launching soon in Riga.",
-    "rights": "© {year} {name} · {location}"
+    "rights": "© {year} {name} · {location}",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy"
   },
   "mock": {
     "today": "Today",

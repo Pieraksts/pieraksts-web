@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { BrandMark } from "@/components/brand-mark";
+import { Link } from "@/i18n/navigation";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
@@ -13,7 +14,21 @@ export function SiteFooter({ className }: { className?: string }) {
           <BrandMark />
           <p className="max-w-sm text-sm text-ink-muted">{t("footer.blurb")}</p>
         </div>
-        <div className="flex flex-col gap-1 text-sm text-ink-soft sm:items-end">
+        <div className="flex flex-col gap-2 text-sm text-ink-soft sm:items-end">
+          <nav className="flex gap-4">
+            <Link
+              href="/legal/terms-of-service"
+              className="transition-colors hover:text-foreground"
+            >
+              {t("footer.terms")}
+            </Link>
+            <Link
+              href="/legal/privacy-policy"
+              className="transition-colors hover:text-foreground"
+            >
+              {t("footer.privacy")}
+            </Link>
+          </nav>
           <span>{t("footer.note")}</span>
           <span>
             {t("footer.rights", {

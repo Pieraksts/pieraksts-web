@@ -78,10 +78,39 @@
   "cta": {
     "title": "Gatavs, tiklīdz Pieraksts atvērsies Rīgā"
   },
+  "waitlist": {
+    "openClient": "Pievienoties",
+    "openOwner": "Salonu īpašniekiem",
+    "title": "Pievienojies Pieraksts gaidītāju sarakstam",
+    "subtitle": "Atstāj savu e-pastu, un mēs paziņosim, tiklīdz Pieraksts atvērsies Rīgā.",
+    "emailLabel": "E-pasta adrese",
+    "emailPlaceholder": "tu@piemers.lv",
+    "roleLabel": "Mani interesē kā…",
+    "roleClient": "Klientu, kas piesakās salonos",
+    "roleOwner": "Salona īpašnieku",
+    "roleBoth": "Abus",
+    "marketingLabel": "Sūtīt man arī retas ziņas par jaunumiem un piedāvājumiem (neobligāti).",
+    "consentNote": "Pievienojoties tu piekrīti, ka mēs saglabājam tavu e-pastu, lai paziņotu par Pieraksts atvēršanu Rīgā. Vari atteikties jebkurā laikā. Skati mūsu <privacy>Privātuma politiku</privacy>.",
+    "submit": "Pievienoties",
+    "submitting": "Pievienojos…",
+    "successTitle": "Tu esi sarakstā!",
+    "successBody": "Paldies — mēs nosūtīsim e-pastu, tiklīdz Pieraksts atvērsies Rīgā.",
+    "errorEmail": "Lūdzu, ievadi derīgu e-pasta adresi.",
+    "errorGeneric": "Kaut kas nogāja greizi. Lūdzu, mēģini vēlreiz pēc brīža.",
+    "close": "Aizvērt"
+  },
+  "legal": {
+    "termsTitle": "Lietošanas noteikumi",
+    "privacyTitle": "Privātuma politika",
+    "effectiveDate": "Spēkā no: {date}",
+    "backHome": "Atpakaļ uz sākumu"
+  },
   "footer": {
     "blurb": "Skaistumkopšanas un aprūpes pierakstu platforma Latvijai, sākot ar Rīgu.",
     "note": "Drīzumā Rīgā.",
-    "rights": "© {year} {name} · {location}"
+    "rights": "© {year} {name} · {location}",
+    "terms": "Lietošanas noteikumi",
+    "privacy": "Privātuma politika"
   },
   "mock": {
     "today": "Šodien",
