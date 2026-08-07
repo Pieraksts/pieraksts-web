@@ -15,6 +15,10 @@ import { SiteFooter } from "@/components/site-footer";
  * land a moment after the owner is redirected here. Claiming success on this
  * page would be the one place in the system where a payment redirect, rather
  * than a verified event, appeared to grant access.
+ *
+ * The visual treatment carries the same restraint. The success page is warm but
+ * not celebratory, because what happened is "we have your card", not "you are
+ * live" — and the owner finds out which in the app, not here.
  */
 export async function BillingOutcomePage({
   outcome,
@@ -28,21 +32,35 @@ export async function BillingOutcomePage({
   return (
     <main className="flex flex-1 flex-col">
       <SiteHeader />
-      <article className="mx-auto w-full max-w-xl px-5 py-16 sm:px-8 sm:py-24">
-        <Icon
-          className={`size-10 ${isReturn ? "text-foreground" : "text-ink-muted"}`}
-          aria-hidden
-        />
-        <h1 className="mt-6 font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-          {t(isReturn ? "return.title" : "cancelled.title")}
-        </h1>
-        <p className="mt-4 text-base text-ink-soft">
-          {t(isReturn ? "return.body" : "cancelled.body")}
-        </p>
-        <p className="mt-6 rounded-xl border border-warm-border bg-warm px-4 py-3 text-sm text-ink-muted">
+
+      <article className="mx-auto flex w-full max-w-xl flex-col px-5 py-16 sm:px-8 sm:py-24">
+        {/* Announced together, so assistive tech reads the outcome as one
+            message rather than an icon followed by an orphaned heading. */}
+        <div role="status" className="flex flex-col">
+          <span
+            className={`flex size-12 shrink-0 items-center justify-center rounded-2xl ${
+              isReturn
+                ? "bg-brand-soft text-brand-strong"
+                : "bg-warm-strong text-ink-muted"
+            }`}
+          >
+            <Icon className="size-6" aria-hidden />
+          </span>
+
+          <h1 className="mt-7 text-balance font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+            {t(isReturn ? "return.title" : "cancelled.title")}
+          </h1>
+
+          <p className="mt-4 text-pretty text-base leading-relaxed text-ink-soft sm:text-lg">
+            {t(isReturn ? "return.body" : "cancelled.body")}
+          </p>
+        </div>
+
+        <p className="mt-8 rounded-2xl border border-warm-border bg-warm px-5 py-4 text-sm leading-relaxed text-ink-muted">
           {t(isReturn ? "return.nextStep" : "cancelled.nextStep")}
         </p>
       </article>
+
       <SiteFooter />
     </main>
   );
