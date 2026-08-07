@@ -10,7 +10,7 @@
  * whenever the wording materially changes.
  */
 
-export const LEGAL_EFFECTIVE_DATE = "2026-06-13";
+export const LEGAL_EFFECTIVE_DATE = "2026-07-06";
 
 type LegalDoc = { en: string; lv: string };
 
@@ -260,6 +260,17 @@ We may introduce explicit retention windows by data category in a future update 
 
 Waitlist contact data is kept until the launch communication is completed and you have had a reasonable opportunity to use the service, or until you unsubscribe or withdraw your consent — whichever is earlier.
 
+### 5.5 Account deletion in the app
+
+You can delete your account at any time in the Pieraksts app under Profile → Delete account. Deletion is permanent and takes effect immediately:
+
+- your profile, favorites, reviews, and notification registrations are erased;
+- upcoming bookings are cancelled and the affected salons are notified;
+- past booking records remain in the salon's business records, but are no longer linked to your name or account (legitimate interest of the salon in keeping accurate service records);
+- if you signed in with Apple, the Sign in with Apple connection to your Apple ID is revoked.
+
+You can also request account deletion by contacting us (see section 11).
+
 ## 6. Data sharing
 
 We may share data with processors that provide technical infrastructure:
@@ -280,7 +291,7 @@ You have the right to:
 
 - request access to your personal data;
 - request correction of inaccurate data;
-- request deletion or restriction of processing;
+- request deletion or restriction of processing — you can delete your account yourself directly in the app (see section 5.5);
 - object to processing based on legitimate interests;
 - withdraw consent at any time (for example, via the unsubscribe link in our emails or by contacting us), without affecting the lawfulness of processing before withdrawal;
 - request data portability, where applicable;
@@ -397,6 +408,17 @@ Mēs varam ieviest precīzus glabāšanas termiņus pa datu kategorijām atsevi�
 
 Gaidītāju saraksta kontaktu dati tiek glabāti, līdz atvēršanas komunikācija ir pabeigta un Tev ir bijusi saprātīga iespēja izmantot pakalpojumu, vai līdz brīdim, kad atsakies vai atsauc savu piekrišanu — atkarībā no tā, kurš notikums iestājas pirmais.
 
+### 5.5 Konta dzēšana lietotnē
+
+Tu vari jebkurā laikā dzēst savu kontu lietotnē Pieraksts sadaļā Profils → Dzēst kontu. Dzēšana ir neatgriezeniska un stājas spēkā nekavējoties:
+
+- tiek dzēsts Tavs profils, izlase, atsauksmes un paziņojumu reģistrācijas;
+- gaidāmās rezervācijas tiek atceltas, un attiecīgie saloni saņem paziņojumu;
+- iepriekšējo rezervāciju ieraksti paliek salona uzskaitē, bet vairs nav saistīti ar Tavu vārdu vai kontu (salona leģitīmā interese uzturēt precīzu pakalpojumu uzskaiti);
+- ja pierakstījies ar Apple, "Sign in with Apple" savienojums ar Tavu Apple ID tiek atsaukts.
+
+Konta dzēšanu vari pieprasīt arī, sazinoties ar mums (skat. 11. sadaļu).
+
 ## 6. Kam dati tiek nodoti
 
 Mēs varam nodot datus datu apstrādātājiem, kas nodrošina tehnoloģisko infrastruktūru:
@@ -417,7 +439,7 @@ Tev ir tiesības:
 
 - pieprasīt piekļuvi saviem datiem;
 - pieprasīt neprecīzu datu labošanu;
-- pieprasīt datu dzēšanu vai apstrādes ierobežošanu;
+- pieprasīt datu dzēšanu vai apstrādes ierobežošanu — kontu vari dzēst arī pats tieši lietotnē (skat. 5.5. sadaļu);
 - iebilst pret apstrādi leģitīmo interešu pamata;
 - atsaukt piekrišanu jebkurā laikā (piemēram, izmantojot atteikšanās saiti mūsu e-pastos vai sazinoties ar mums), neietekmējot apstrādes likumību pirms atsaukšanas;
 - pieprasīt datu pārnesamību, ja tas piemērojams;
