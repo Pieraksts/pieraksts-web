@@ -105,6 +105,18 @@
     "effectiveDate": "Effective date: {date}",
     "backHome": "Back to home"
   },
+  "billing": {
+    "return": {
+      "title": "Payment method received",
+      "body": "Thank you. Your payment method has been received. Nothing is charged during the Free Trial.",
+      "nextStep": "Open the Pieraksts Business app. Your subscription status will update shortly."
+    },
+    "cancelled": {
+      "title": "Checkout was not completed",
+      "body": "Nothing was charged and nothing changed.",
+      "nextStep": "Open the Pieraksts Business app and try again when you are ready."
+    }
+  },
   "footer": {
     "blurb": "A beauty and personal care booking marketplace for Latvia, starting in Riga.",
     "note": "Launching soon in Riga.",

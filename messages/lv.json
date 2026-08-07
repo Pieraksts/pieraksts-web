@@ -105,6 +105,18 @@
     "effectiveDate": "Spēkā no: {date}",
     "backHome": "Atpakaļ uz sākumu"
   },
+  "billing": {
+    "return": {
+      "title": "Maksājuma veids ir saņemts",
+      "body": "Paldies. Maksājuma veids ir saņemts. Bezmaksas periodā maksa netiek ieturēta.",
+      "nextStep": "Atveriet Pieraksts Business lietotni. Abonementa statuss tiks atjaunināts tuvāko mirkļu laikā."
+    },
+    "cancelled": {
+      "title": "Maksājums netika pabeigts",
+      "body": "Maksa netika ieturēta un nekas nemainījās.",
+      "nextStep": "Atveriet Pieraksts Business lietotni un mēģiniet vēlreiz, kad būsiet gatavs."
+    }
+  },
   "footer": {
     "blurb": "Skaistumkopšanas un aprūpes pierakstu platforma Latvijai, sākot ar Rīgu.",
     "note": "Drīzumā Rīgā.",
