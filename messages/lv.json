@@ -115,7 +115,8 @@
       "title": "Maksājums netika pabeigts",
       "body": "Maksa netika ieturēta un nekas nemainījās.",
       "nextStep": "Atveriet Pieraksts Business lietotni un mēģiniet vēlreiz, kad būsiet gatavs."
-    }
+    },
+    "openApp": "Atvērt Pieraksts Business lietotni"
   },
   "footer": {
     "blurb": "Skaistumkopšanas un aprūpes pierakstu platforma Latvijai, sākot ar Rīgu.",

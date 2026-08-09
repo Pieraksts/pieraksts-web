@@ -115,7 +115,8 @@
       "title": "Checkout was not completed",
       "body": "Nothing was charged and nothing changed.",
       "nextStep": "Open the Pieraksts Business app and try again when you are ready."
-    }
+    },
+    "openApp": "Open the Pieraksts Business app"
   },
   "footer": {
     "blurb": "A beauty and personal care booking marketplace for Latvia, starting in Riga.",

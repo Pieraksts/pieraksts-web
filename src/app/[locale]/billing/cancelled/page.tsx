@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { BillingOutcomePage } from "@/components/billing-outcome";
+import { APP_RETURN_QUERY_PARAM, resolveAppReturnUrl } from "@/lib/app-return";
 
 type Params = { locale: string };
+type Search = { [key: string]: string | string[] | undefined };
 
 export async function generateMetadata({
   params,
@@ -19,11 +21,20 @@ export async function generateMetadata({
 
 export default async function BillingCancelledPage({
   params,
+  searchParams,
 }: {
   params: Promise<Params>;
+  searchParams: Promise<Search>;
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <BillingOutcomePage outcome="cancelled" />;
+  // PAY-008. This is the link that finally makes `reportCheckoutCancelled()`
+  // reachable in the app: without it, a cancelled checkout looked exactly like
+  // a closed browser.
+  const appReturnUrl = resolveAppReturnUrl(
+    (await searchParams)[APP_RETURN_QUERY_PARAM]
+  );
+
+  return <BillingOutcomePage outcome="cancelled" appReturnUrl={appReturnUrl} />;
 }

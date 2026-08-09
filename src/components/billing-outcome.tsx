@@ -2,6 +2,8 @@ import { getTranslations } from "next-intl/server";
 import { CheckCircle2, Info } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { ctaVariants } from "@/components/landing-button";
+import { cn } from "@/lib/utils";
 
 /**
  * Shared chrome for the two PAY-1 billing landing pages.
@@ -19,11 +21,20 @@ import { SiteFooter } from "@/components/site-footer";
  * The visual treatment carries the same restraint. The success page is warm but
  * not celebratory, because what happened is "we have your card", not "you are
  * live" — and the owner finds out which in the app, not here.
+ *
+ * PAY-008 adds one thing and changes none of the above: a link back into the
+ * app. Under PAY-1 these pages were where the owner stopped, which is why the
+ * app could never tell a cancelled checkout from a closed browser. The link is
+ * still just a link — it reports nothing, grants nothing, and the app re-reads
+ * canonical server state when it receives it.
  */
 export async function BillingOutcomePage({
   outcome,
+  appReturnUrl,
 }: {
   outcome: "return" | "cancelled";
+  /** Already allow-listed by `resolveAppReturnUrl`; `null` when absent or refused. */
+  appReturnUrl?: string | null;
 }) {
   const t = await getTranslations("billing");
   const isReturn = outcome === "return";
@@ -59,6 +70,19 @@ export async function BillingOutcomePage({
         <p className="mt-8 rounded-2xl border border-warm-border bg-warm px-5 py-4 text-sm leading-relaxed text-ink-muted">
           {t(isReturn ? "return.nextStep" : "cancelled.nextStep")}
         </p>
+
+        {/* A custom scheme, so a plain anchor rather than `next/link`: this
+            leaves the site rather than navigating within it. Absent when no
+            allowed return target was supplied, which degrades to the PAY-1
+            behaviour of reopening the app by hand. */}
+        {appReturnUrl ? (
+          <a
+            href={appReturnUrl}
+            className={cn(ctaVariants({ variant: "brand" }), "mt-6 self-start")}
+          >
+            {t("openApp")}
+          </a>
+        ) : null}
       </article>
 
       <SiteFooter />

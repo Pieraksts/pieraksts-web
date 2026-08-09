@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { BillingOutcomePage } from "@/components/billing-outcome";
+import { APP_RETURN_QUERY_PARAM, resolveAppReturnUrl } from "@/lib/app-return";
 
 type Params = { locale: string };
+type Search = { [key: string]: string | string[] | undefined };
 
 export async function generateMetadata({
   params,
@@ -21,11 +23,19 @@ export async function generateMetadata({
 
 export default async function BillingReturnPage({
   params,
+  searchParams,
 }: {
   params: Promise<Params>;
+  searchParams: Promise<Search>;
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <BillingOutcomePage outcome="return" />;
+  // PAY-008. Supplied by the backend through the provider, and allow-listed
+  // before it is rendered.
+  const appReturnUrl = resolveAppReturnUrl(
+    (await searchParams)[APP_RETURN_QUERY_PARAM]
+  );
+
+  return <BillingOutcomePage outcome="return" appReturnUrl={appReturnUrl} />;
 }
