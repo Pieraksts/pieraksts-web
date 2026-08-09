@@ -109,12 +109,14 @@
     "return": {
       "title": "Maksājuma veids ir saņemts",
       "body": "Paldies. Maksājuma veids ir saņemts. Bezmaksas periodā maksa netiek ieturēta.",
-      "nextStep": "Atveriet Pieraksts Business lietotni. Abonementa statuss tiks atjaunināts tuvāko mirkļu laikā."
+      "nextStep": "Abonementa statuss lietotnē atjaunosies, tiklīdz maksājumu pakalpojums to apstiprinās.",
+      "nextStepManual": "Atveriet Pieraksts Business lietotni, lai turpinātu. Abonementa statuss tur atjaunosies, tiklīdz maksājumu pakalpojums to apstiprinās."
     },
     "cancelled": {
       "title": "Maksājums netika pabeigts",
       "body": "Maksa netika ieturēta un nekas nemainījās.",
-      "nextStep": "Atveriet Pieraksts Business lietotni un mēģiniet vēlreiz, kad būsiet gatavs."
+      "nextStep": "Lietotnē varat sākt maksājumu no jauna, kad būsiet gatavs.",
+      "nextStepManual": "Atveriet Pieraksts Business lietotni, lai turpinātu. Maksājumu varat sākt no jauna, kad būsiet gatavs."
     },
     "openApp": "Atvērt Pieraksts Business lietotni"
   },

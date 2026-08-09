@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { CheckCircle2, Info } from "lucide-react";
+import { CheckCircle2, Info, Smartphone } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ctaVariants } from "@/components/landing-button";
@@ -27,6 +27,17 @@ import { cn } from "@/lib/utils";
  * app could never tell a cancelled checkout from a closed browser. The link is
  * still just a link — it reports nothing, grants nothing, and the app re-reads
  * canonical server state when it receives it.
+ *
+ * The page therefore has two genuinely different endings, and both are
+ * designed rather than one being the other minus a button:
+ *
+ * - with an allow-listed return target, the button *is* the way back, so the
+ *   text beside it says what happens next instead of repeating the instruction
+ *   the button already carries;
+ * - without one — the parameter was absent, repeated, or refused by the
+ *   allow-list — there is no link this page is permitted to build, so the way
+ *   back becomes an explicit, titled instruction rather than a paragraph left
+ *   standing where a button used to be.
  */
 export async function BillingOutcomePage({
   outcome,
@@ -44,21 +55,22 @@ export async function BillingOutcomePage({
     <main className="flex flex-1 flex-col">
       <SiteHeader />
 
-      <article className="mx-auto flex w-full max-w-xl flex-col px-5 py-16 sm:px-8 sm:py-24">
+      <article className="mx-auto flex w-full max-w-xl flex-col px-5 py-14 sm:px-8 sm:py-24">
         {/* Announced together, so assistive tech reads the outcome as one
             message rather than an icon followed by an orphaned heading. */}
         <div role="status" className="flex flex-col">
           <span
-            className={`flex size-12 shrink-0 items-center justify-center rounded-2xl ${
+            className={cn(
+              "flex size-12 shrink-0 items-center justify-center rounded-2xl",
               isReturn
                 ? "bg-brand-soft text-brand-strong"
                 : "bg-warm-strong text-ink-muted"
-            }`}
+            )}
           >
             <Icon className="size-6" aria-hidden />
           </span>
 
-          <h1 className="mt-7 text-balance font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+          <h1 className="mt-7 text-balance font-display text-3xl leading-[1.1] font-extrabold tracking-tight text-foreground sm:text-4xl">
             {t(isReturn ? "return.title" : "cancelled.title")}
           </h1>
 
@@ -67,22 +79,37 @@ export async function BillingOutcomePage({
           </p>
         </div>
 
-        <p className="mt-8 rounded-2xl border border-warm-border bg-warm px-5 py-4 text-sm leading-relaxed text-ink-muted">
-          {t(isReturn ? "return.nextStep" : "cancelled.nextStep")}
-        </p>
-
-        {/* A custom scheme, so a plain anchor rather than `next/link`: this
-            leaves the site rather than navigating within it. Absent when no
-            allowed return target was supplied, which degrades to the PAY-1
-            behaviour of reopening the app by hand. */}
         {appReturnUrl ? (
-          <a
-            href={appReturnUrl}
-            className={cn(ctaVariants({ variant: "brand" }), "mt-6 self-start")}
-          >
-            {t("openApp")}
-          </a>
-        ) : null}
+          <div className="mt-9 flex flex-col items-start gap-3 border-t border-hairline pt-8">
+            {/* A custom scheme, so a plain anchor rather than `next/link`: this
+                leaves the site rather than navigating within it. */}
+            <a
+              href={appReturnUrl}
+              className={cn(ctaVariants({ variant: "brand" }), "w-full sm:w-auto")}
+            >
+              {t("openApp")}
+            </a>
+            <p className="text-pretty text-sm leading-relaxed text-ink-muted">
+              {t(isReturn ? "return.nextStep" : "cancelled.nextStep")}
+            </p>
+          </div>
+        ) : (
+          <div className="mt-9 flex gap-4 rounded-2xl border border-warm-border bg-warm p-5 sm:p-6">
+            <span className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-xl bg-warm-strong text-ink-muted">
+              <Smartphone className="size-[1.15rem]" aria-hidden />
+            </span>
+            <div className="min-w-0">
+              <p className="font-display text-base font-bold tracking-tight text-foreground">
+                {t("openApp")}
+              </p>
+              <p className="mt-1.5 text-pretty text-sm leading-relaxed text-ink-muted">
+                {t(
+                  isReturn ? "return.nextStepManual" : "cancelled.nextStepManual"
+                )}
+              </p>
+            </div>
+          </div>
+        )}
       </article>
 
       <SiteFooter />

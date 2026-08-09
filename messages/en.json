@@ -109,12 +109,14 @@
     "return": {
       "title": "Payment method received",
       "body": "Thank you. Your payment method has been received. Nothing is charged during the Free Trial.",
-      "nextStep": "Open the Pieraksts Business app. Your subscription status will update shortly."
+      "nextStep": "Your subscription status updates in the app once your payment provider confirms it.",
+      "nextStepManual": "Open the Pieraksts Business app to continue. Your subscription status updates there once your payment provider confirms it."
     },
     "cancelled": {
       "title": "Checkout was not completed",
       "body": "Nothing was charged and nothing changed.",
-      "nextStep": "Open the Pieraksts Business app and try again when you are ready."
+      "nextStep": "You can start checkout again in the app whenever you are ready.",
+      "nextStepManual": "Open the Pieraksts Business app to continue. You can start checkout again whenever you are ready."
     },
     "openApp": "Open the Pieraksts Business app"
   },
