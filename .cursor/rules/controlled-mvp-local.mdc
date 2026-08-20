@@ -1,0 +1,38 @@
+---
+description: Controlled-MVP local stack assumptions and hard hosted-DB safety
+alwaysApply: true
+---
+
+# Controlled-MVP local stack
+
+Assume these while delivering slices on `feature/controlled-mvp-restructure`
+unless the user overrides them in the current session.
+
+## Hard safety
+
+- **NEVER** run destructive or mutating database commands against hosted/prod
+  (reset, migrate, seed, push, destructive SQL, dashboard schema edits) unless
+  the user explicitly authorizes that exact hosted action with a
+  destructive-change preview.
+- If local Supabase is **not** running, **spin it up** in
+  `pieraksts-backend` (`supabase start`). Do not fall back to hosted. Do not
+  ask whether to use prod as a substitute.
+
+## Core delivery path
+
+- Remaining slices focus on **Backend, Business, and Client** (+ **Web** for
+  Pay). Do not enter or maintain `pieraksts-admin` during this migration.
+- Leave Admin untouched; stale Admin UI is expected. Admin rebuilds later.
+- Stripe / webhook listener setup is a separate dedicated session (PAY-1).
+
+## Local stack
+
+- Local Supabase is Docker-backed in Backend. Prefer `supabase status` before
+  `supabase start`; start only when down.
+- Hosted mutation always needs separate explicit approval.
+- Explained or ledgered dirty paths are not blockers; preserve them.
+
+## Slice entry
+
+Use Business `.agents/skills/prepare-pieraksts-slice/SKILL.md` with the
+delivery map and requirements register; do not invent product rules.
