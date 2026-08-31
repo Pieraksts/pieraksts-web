@@ -103,7 +103,10 @@
     "termsTitle": "Lietošanas noteikumi",
     "privacyTitle": "Privātuma politika",
     "effectiveDate": "Spēkā no: {date}",
-    "backHome": "Atpakaļ uz sākumu"
+    "backHome": "Atpakaļ uz sākumu",
+    "cookiesTitle": "Sīkdatņu politika",
+    "guidelinesTitle": "Kopienas vadlīnijas",
+    "deletionTitle": "Konta dzēšana"
   },
   "billing": {
     "return": {
@@ -124,8 +127,12 @@
     "blurb": "Skaistumkopšanas un aprūpes pierakstu platforma Latvijai, sākot ar Rīgu.",
     "note": "Drīzumā Rīgā.",
     "rights": "© {year} {name} · {location}",
-    "terms": "Lietošanas noteikumi",
-    "privacy": "Privātuma politika"
+    "terms": "Noteikumi",
+    "privacy": "Privātums",
+    "cookies": "Sīkdatnes",
+    "guidelines": "Kopiena",
+    "deletion": "Dzēst kontu",
+    "legalHeading": "Juridiskā informācija"
   },
   "mock": {
     "today": "Šodien",
@@ -136,12 +143,28 @@
     "salonName": "Studio Carmine",
     "rating": "4.9",
     "salonMeta": "Centrs, Rīga · Mati un krāsošana",
-    "services": ["Griezums", "Balajāža", "Veidošana"],
+    "services": [
+      "Griezums",
+      "Balajāža",
+      "Veidošana"
+    ],
     "days": [
-      { "d": "Pr", "n": "16" },
-      { "d": "Ot", "n": "17" },
-      { "d": "Tr", "n": "18" },
-      { "d": "Ce", "n": "19" }
+      {
+        "d": "Pr",
+        "n": "16"
+      },
+      {
+        "d": "Ot",
+        "n": "17"
+      },
+      {
+        "d": "Tr",
+        "n": "18"
+      },
+      {
+        "d": "Ce",
+        "n": "19"
+      }
     ],
     "bookings": [
       {

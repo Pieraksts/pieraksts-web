@@ -103,7 +103,10 @@
     "termsTitle": "Terms of Service",
     "privacyTitle": "Privacy Policy",
     "effectiveDate": "Effective date: {date}",
-    "backHome": "Back to home"
+    "backHome": "Back to home",
+    "cookiesTitle": "Cookie Policy",
+    "guidelinesTitle": "Community Guidelines",
+    "deletionTitle": "Deleting your account"
   },
   "billing": {
     "return": {
@@ -124,8 +127,12 @@
     "blurb": "A beauty and personal care booking marketplace for Latvia, starting in Riga.",
     "note": "Launching soon in Riga.",
     "rights": "© {year} {name} · {location}",
-    "terms": "Terms of Service",
-    "privacy": "Privacy Policy"
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "guidelines": "Community",
+    "deletion": "Delete account",
+    "legalHeading": "Legal"
   },
   "mock": {
     "today": "Today",
@@ -136,12 +143,28 @@
     "salonName": "Studio Carmine",
     "rating": "4.9",
     "salonMeta": "Centrs, Riga · Hair & colour",
-    "services": ["Cut", "Balayage", "Styling"],
+    "services": [
+      "Cut",
+      "Balayage",
+      "Styling"
+    ],
     "days": [
-      { "d": "Mon", "n": "16" },
-      { "d": "Tue", "n": "17" },
-      { "d": "Wed", "n": "18" },
-      { "d": "Thu", "n": "19" }
+      {
+        "d": "Mon",
+        "n": "16"
+      },
+      {
+        "d": "Tue",
+        "n": "17"
+      },
+      {
+        "d": "Wed",
+        "n": "18"
+      },
+      {
+        "d": "Thu",
+        "n": "19"
+      }
     ],
     "bookings": [
       {

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
+import { LEGAL_ROUTES } from "@/lib/legal-content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -25,7 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     page("", 1, "weekly"),
-    page("/legal/terms-of-service", 0.3, "yearly"),
-    page("/legal/privacy-policy", 0.3, "yearly"),
+    ...LEGAL_ROUTES.map((path) => page(path, 0.3, "yearly")),
   ];
 }

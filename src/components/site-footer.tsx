@@ -4,6 +4,15 @@ import { Link } from "@/i18n/navigation";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
+/** Footer legal nav. Mirrors LEGAL_ROUTES in src/lib/legal-content.ts. */
+const LEGAL_LINKS = [
+  { href: "/legal/terms-of-service", key: "terms" },
+  { href: "/legal/privacy-policy", key: "privacy" },
+  { href: "/legal/cookie-policy", key: "cookies" },
+  { href: "/legal/community-guidelines", key: "guidelines" },
+  { href: "/legal/account-deletion", key: "deletion" },
+] as const;
+
 export function SiteFooter({ className }: { className?: string }) {
   const t = useTranslations();
 
@@ -15,19 +24,19 @@ export function SiteFooter({ className }: { className?: string }) {
           <p className="max-w-sm text-sm text-ink-muted">{t("footer.blurb")}</p>
         </div>
         <div className="flex flex-col gap-2 text-sm text-ink-soft sm:items-end">
-          <nav className="flex gap-4">
-            <Link
-              href="/legal/terms-of-service"
-              className="transition-colors hover:text-foreground"
-            >
-              {t("footer.terms")}
-            </Link>
-            <Link
-              href="/legal/privacy-policy"
-              className="transition-colors hover:text-foreground"
-            >
-              {t("footer.privacy")}
-            </Link>
+          <nav
+            aria-label={t("footer.legalHeading")}
+            className="flex flex-wrap gap-x-4 gap-y-1.5 sm:justify-end"
+          >
+            {LEGAL_LINKS.map(({ href, key }) => (
+              <Link
+                key={href}
+                href={href}
+                className="transition-colors hover:text-foreground"
+              >
+                {t(`footer.${key}`)}
+              </Link>
+            ))}
           </nav>
           <span>{t("footer.note")}</span>
           <span>
