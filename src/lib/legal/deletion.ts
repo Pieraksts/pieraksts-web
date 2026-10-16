@@ -102,7 +102,7 @@ The deletion cannot finish while the subscription can still charge you. This inc
 
 ## 8. If you cannot use the in-app option
 
-If you have lost access to your account or cannot reach the delete option, write to ${COMPANY.privacyEmail} from the email address on the account, with the subject "Account deletion". We may ask you to confirm your identity so that nobody else can delete your account. We complete the deletion within 30 days and confirm when it is done.
+If you have lost access to your account or cannot reach the delete option, write to ${COMPANY.privacyEmail} from the email address on the account, with the subject "Account deletion". We may ask you to confirm your identity so that nobody else can delete your account. We complete the deletion within 30 days and confirm when it is done. If you are a salon owner, the deletion can finish only after the steps in section 3 are done. The 30 days start when they are all done.
 
 You can make the same request by post to ${COMPANY.legalName}, ${COMPANY_ADDRESS_INLINE}, ${COMPANY.country.en}, or by phone on ${COMPANY.phoneSupport}.
 
@@ -205,7 +205,7 @@ Dzēšanu nevar pabeigt, kamēr par abonementu vēl var iekasēt maksu. Tas atti
 
 ## 8. Ja nevari izmantot iespēju lietotnē
 
-Ja esi zaudējis piekļuvi kontam vai nevari atrast dzēšanas iespēju, raksti uz ${COMPANY.privacyEmail} no konta e-pasta adreses ar tematu "Konta dzēšana". Mēs varam lūgt apliecināt identitāti, lai kontu nevarētu dzēst kāds cits. Dzēšanu pabeidzam 30 dienu laikā un par to paziņojam.
+Ja esi zaudējis piekļuvi kontam vai nevari atrast dzēšanas iespēju, raksti uz ${COMPANY.privacyEmail} no konta e-pasta adreses ar tematu "Konta dzēšana". Mēs varam lūgt apliecināt identitāti, lai kontu nevarētu dzēst kāds cits. Dzēšanu pabeidzam 30 dienu laikā un par to paziņojam. Ja esi salona īpašnieks, dzēšanu var pabeigt tikai tad, kad 3. sadaļā minētie soļi ir izpildīti. 30 dienas sākas, kad tie visi ir izpildīti.
 
 To pašu pieprasījumu vari nosūtīt pa pastu: ${COMPANY.legalName}, ${COMPANY_ADDRESS_INLINE}, ${COMPANY.country.lv}, vai pa tālruni ${COMPANY.phoneSupport}.
 

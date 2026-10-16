@@ -10,8 +10,8 @@ import type { LegalDoc } from "./types";
  * remove or water down that section — App Review checks for it whenever a
  * custom EULA is used instead of Apple's standard one. Sections 12–14 cover
  * App Store Review Guideline 1.2 (user-generated content), section 11 covers
- * Guideline 3.1.2 (auto-renewable subscriptions) and section 7 covers
- * Guideline 5.1.1(v) (account deletion).
+ * the salon subscription, billed through Stripe on the web (lifecycle section
+ * 6), and section 7 covers Guideline 5.1.1(v) (account deletion).
  */
 export const termsDoc: LegalDoc = {
   en: `## 1. Who we are
@@ -82,7 +82,9 @@ When you delete your account:
 - data we are required by law to keep, such as accounting records for a Salon subscription, is retained for the statutory period and then deleted;
 - backups are overwritten on their normal rotation.
 
-Deletion is permanent and cannot be undone. If you cannot reach the in-app option, see our [Account Deletion](/legal/account-deletion) page or write to ${COMPANY.supportEmail}, and we will complete the deletion for you within 30 days.
+If you are a Salon Owner, deleting your account also closes your Salon. The deletion can finish only after you cancel or complete upcoming bookings, hide the Salon, end the subscription, remove other members and pay any unpaid Boost commission. We keep some Salon records for 5 years. The [Account Deletion](/legal/account-deletion) page describes the steps and what we keep.
+
+Deletion is permanent and cannot be undone. If you cannot reach the in-app option, see our [Account Deletion](/legal/account-deletion) page or write to ${COMPANY.supportEmail}, and we will complete the deletion for you within 30 days. For a Salon Owner, the 30 days start when these steps are done.
 
 ## 8. Making a booking
 
@@ -113,21 +115,15 @@ Salons must likewise honour confirmed bookings. A Salon that repeatedly cancels 
 - We do not process, hold or refund payments for Salon Services, and we do not issue invoices or receipts for them. The Salon does.
 - The Service is free of charge for Clients.
 
-## 11. Salon subscriptions purchased through the App Store
+## 11. Salon subscriptions
 
-Some features for Salons are offered as an auto-renewable subscription purchased inside the iOS app through Apple's In-App Purchase. Where you buy such a subscription, the following applies.
+Salons pay Pieraksts for a monthly subscription. Payments go through Stripe. You add a payment method on a Stripe web page, and Stripe charges it. The following applies.
 
-- The subscription title, the length of the subscription period, what it includes, and the price are shown to you in the app before you confirm the purchase.
-- Payment is charged to your Apple ID account at confirmation of purchase.
-- The subscription renews automatically unless auto-renewal is turned off at least 24 hours before the end of the current period.
-- Your account is charged for renewal within 24 hours before the end of the current period, at the price shown for the renewal.
-- You can manage your subscription and turn off auto-renewal in your Apple ID Account Settings after purchase.
-- Any free trial period that we offer is forfeited when you buy a subscription, to the extent that this is offered.
-- Refunds for App Store purchases are handled by Apple under the Apple Media Services Terms and Conditions, not by us. We cannot refund an App Store purchase. Your statutory rights are unaffected.
+- Before you start the subscription, you see the price, what it includes, the length of the free trial, the VAT, and how cancellation works.
+- The subscription renews every month, and Stripe charges the payment method automatically.
+- You can cancel in the app at any time, on the Subscription screen. The cancellation takes effect at the end of the current free trial or paid period. Until then you keep full access. You can withdraw the cancellation before that date.
 - Cancelling a subscription stops future renewals. Unless the law requires otherwise, we do not refund the unused part of a period that has already been paid for.
 - Subscriptions for Salons are sold to businesses acting in a commercial capacity. The consumer right of withdrawal does not apply to them.
-
-We may also invoice Salons directly for services agreed outside the app. Where we do, the agreed invoice terms apply, payment is due within the period stated on the invoice, and statutory late-payment interest may be charged.
 
 ## 12. User Content and the licence you grant us
 
@@ -343,7 +339,9 @@ Dzēšot kontu:
 - dati, kas mums normatīvo aktu dēļ jāsaglabā, piemēram, grāmatvedības ieraksti par Salona abonementu, tiek glabāti likumā noteikto termiņu un pēc tam dzēsti;
 - rezerves kopijas tiek pārrakstītas to parastajā rotācijas ciklā.
 
-Dzēšana ir neatgriezeniska. Ja nevari izmantot dzēšanas iespēju lietotnē, skati [Konta dzēšanas](/legal/account-deletion) lapu vai raksti uz ${COMPANY.supportEmail}, un mēs dzēšanu veiksim 30 dienu laikā.
+Ja esi Salona īpašnieks, konta dzēšana slēdz arī Tavu Salonu. Dzēšanu var pabeigt tikai pēc tam, kad esi atcēlis vai pabeidzis gaidāmos pierakstus, paslēpis Salonu, beidzis abonementu, noņēmis pārējos dalībniekus un samaksājis neapmaksāto Boost komisiju. Daļu Salona ierakstu glabājam 5 gadus. [Konta dzēšanas](/legal/account-deletion) lapā ir aprakstīti soļi un tas, ko glabājam.
+
+Dzēšana ir neatgriezeniska. Ja nevari izmantot dzēšanas iespēju lietotnē, skati [Konta dzēšanas](/legal/account-deletion) lapu vai raksti uz ${COMPANY.supportEmail}, un mēs dzēšanu veiksim 30 dienu laikā. Salona īpašniekam 30 dienas sākas, kad šie soļi ir izpildīti.
 
 ## 8. Pieraksta veikšana
 
@@ -374,21 +372,15 @@ Arī Saloniem ir jāievēro apstiprinātie pieraksti. Salons, kas atkārtoti īs
 - Mēs neapstrādājam, neuzglabājam un neatmaksājam maksājumus par Salona pakalpojumiem un neizrakstām par tiem rēķinus vai čekus. To dara Salons.
 - Klientiem Pakalpojums ir bez maksas.
 
-## 11. Salonu abonementi, kas iegādāti App Store
+## 11. Salonu abonementi
 
-Atsevišķas Saloniem paredzētas funkcijas tiek piedāvātas kā automātiski atjaunojams abonements, kas iegādājams iOS lietotnē ar Apple In-App Purchase. Ja iegādājies šādu abonementu, piemēro turpmāko.
+Saloni maksā Pieraksts par ikmēneša abonementu. Maksājumi notiek caur Stripe. Maksājuma veidu Tu pievieno Stripe tīmekļa lapā, un Stripe no tā iekasē maksu. Piemēro turpmāko.
 
-- Abonementa nosaukums, perioda ilgums, saturs un cena tiek parādīti lietotnē pirms pirkuma apstiprināšanas.
-- Maksa tiek ieturēta no Tava Apple ID konta pirkuma apstiprināšanas brīdī.
-- Abonements atjaunojas automātiski, ja vien automātiskā atjaunošana netiek izslēgta vismaz 24 stundas pirms kārtējā perioda beigām.
-- Maksa par atjaunošanu tiek ieturēta 24 stundu laikā pirms kārtējā perioda beigām, atjaunošanai norādītajā cenā.
-- Abonementu pārvaldīt un automātisko atjaunošanu izslēgt vari sava Apple ID konta iestatījumos pēc pirkuma.
-- Ja tiek piedāvāts bezmaksas izmēģinājuma periods, tā neizmantotā daļa zūd, iegādājoties abonementu.
-- App Store pirkumu atmaksu saskaņā ar Apple Media Services noteikumiem administrē Apple, nevis mēs. Mēs nevaram atmaksāt App Store pirkumu. Tas neietekmē Tavas normatīvajos aktos noteiktās tiesības.
+- Pirms abonementa sākšanas Tu redzi cenu, to, kas tajā iekļauts, bezmaksas perioda ilgumu, PVN un to, kā notiek atcelšana.
+- Abonements atjaunojas katru mēnesi, un Stripe automātiski iekasē maksu no maksājuma veida.
+- Abonementu vari atcelt lietotnē jebkurā laikā, ekrānā Abonements. Atcelšana stājas spēkā kārtējā bezmaksas vai apmaksātā perioda beigās. Līdz tam Tev saglabājas pilna piekļuve. Līdz šim datumam atcelšanu vari atsaukt.
 - Abonementa atcelšana pārtrauc turpmāku atjaunošanu. Ja vien normatīvie akti nenosaka citādi, mēs neatmaksājam jau apmaksāta perioda neizmantoto daļu.
 - Salonu abonementi tiek pārdoti komercdarbību veicošiem uzņēmumiem. Patērētāja atteikuma tiesības uz tiem neattiecas.
-
-Mēs varam arī izrakstīt Saloniem rēķinus par ārpus lietotnes saskaņotiem pakalpojumiem. Tādā gadījumā piemēro saskaņotos rēķina noteikumus, samaksa veicama rēķinā norādītajā termiņā, un var tikt piemēroti likumiskie nokavējuma procenti.
 
 ## 12. Lietotāja saturs un licence, ko piešķir mums
 
