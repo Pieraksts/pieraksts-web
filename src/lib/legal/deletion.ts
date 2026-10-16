@@ -38,7 +38,15 @@ You will be signed out immediately and the deletion is carried out at once. You 
 - Your push notification tokens, so notifications stop immediately.
 - Your notification and language settings.
 
-If you are a salon owner, deleting your account also removes your salon profile, its services, staff entries and gallery, unless another owner account is attached to that salon. In that case the salon stays and only your personal account is removed.
+If you are a salon owner, deleting your account also deletes your salon. Before the deletion can finish, you must:
+
+- Cancel or complete all upcoming bookings.
+- Hide the salon from Pieraksts.
+- Cancel the salon subscription, then wait for the paid period to end.
+- Remove all other salon members, such as admins and employees.
+- Pay any unpaid Boost commission.
+
+The app shows each step that is still open. When the deletion finishes, we erase the salon name, description, logo, gallery, contact details and address. We keep the salon invoices for 5 years (see section 5), with the company name, registration number, VAT number and legal address on them.
 
 ## 4. What happens to your upcoming appointments
 
@@ -110,7 +118,15 @@ Tu tiksi nekavējoties izrakstīts, un dzēšana tiek veikta uzreiz. Uz e-pastu 
 - Push paziņojumu tokeni, tāpēc paziņojumi pārstāj nākt uzreiz.
 - Paziņojumu un valodas iestatījumi.
 
-Ja esi salona īpašnieks, konta dzēšana likvidē arī salona profilu, tā pakalpojumus, darbinieku ierakstus un galeriju, ja vien salonam nav piesaistīts cits īpašnieka konts. Tādā gadījumā salons paliek un tiek dzēsts tikai Tavs personīgais konts.
+Ja esi salona īpašnieks, konta dzēšana likvidē arī Tavu salonu. Pirms dzēšana var noslēgties, izdari šo:
+
+- Atcel vai pabeidz visus gaidāmos pierakstus.
+- Paslēp salonu no Pieraksts.
+- Atcel salona abonementu un nogaidi, līdz beidzas apmaksātais periods.
+- Noņem visus pārējos salona dalībniekus, piemēram, administratorus un darbiniekus.
+- Nokārto neapmaksāto Boost komisiju, ja tāda ir.
+
+Lietotne parāda katru vēl neizpildīto soli. Kad dzēšana noslēdzas, mēs izdzēšam salona nosaukumu, aprakstu, logotipu, galeriju, kontaktinformāciju un adresi. Salona rēķinus glabājam 5 gadus (skat. 5. sadaļu), un tajos paliek uzņēmuma nosaukums, reģistrācijas numurs, PVN numurs un juridiskā adrese.
 
 ## 4. Kas notiek ar gaidāmajiem pierakstiem
 
