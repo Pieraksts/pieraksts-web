@@ -19,6 +19,8 @@ Deleting your Pieraksts account takes under a minute and happens entirely inside
 
 Deletion removes the account. It is not a deactivation or a pause.
 
+If you are a salon owner, deletion takes longer. You must first do the steps in section 3. If you have a subscription, the deletion can finish only after the paid period ends.
+
 ## 2. How to delete your account in the app
 
 - Open the Pieraksts app and sign in.
@@ -27,6 +29,17 @@ Deletion removes the account. It is not a deactivation or a pause.
 - Read the summary of what will be removed, then confirm.
 
 You will be signed out immediately and the deletion is carried out at once. You will receive a confirmation email.
+
+If you are a salon owner, the steps are different:
+
+- Open the Pieraksts Business app and sign in.
+- Go to Profile and choose Delete account.
+- Choose Delete my account, then confirm. This records your deletion request. Nothing is deleted yet.
+- Do each step that the app shows as open. Section 3 lists these steps.
+- When all steps are done, choose Delete account and salon, then confirm.
+- If you signed in with Apple, the app asks you to sign in with Apple again. Then the deletion starts.
+
+Before the last confirmation, you can withdraw the request. Choose Keep my account. The deletion does not finish by itself when the last step is done. It runs only when you confirm it. The app shows when your account is deleted. We do not send a confirmation email to a salon owner.
 
 ## 3. What is deleted
 
@@ -54,6 +67,8 @@ Any confirmed bookings you hold in the future are cancelled automatically. The s
 
 If you have an appointment in the next 24 hours, please tell the salon directly as well, so they can offer the slot to someone else.
 
+If you are a salon owner, account deletion does not cancel the bookings at your salon. The deletion cannot finish while your salon has an upcoming confirmed booking. Cancel or complete each upcoming booking yourself.
+
 ## 5. What we keep, and for how long
 
 A small amount of data survives deletion, because the law requires it or because it no longer identifies you.
@@ -73,9 +88,9 @@ If you sign up again later, it will be a new account with nothing carried over.
 
 ## 7. Salon subscriptions
 
-Deleting your account does not cancel an App Store subscription. Apple, not us, manages those. Cancel it in your Apple ID Account Settings, under Subscriptions, before or after you delete the account — otherwise it will continue to renew.
+Deleting your account does not cancel the salon subscription. Cancel it yourself on the Subscription screen in the Pieraksts Business app.
 
-If we invoice your salon directly, tell us at ${COMPANY.supportEmail} so we can close the billing arrangement.
+The deletion cannot finish while the subscription can still charge you. This includes a free trial. After you cancel, you keep full access until the free trial or the paid period ends. You can record the deletion request before that date. The deletion can finish only after that date.
 
 ## 8. If you cannot use the in-app option
 
@@ -99,6 +114,8 @@ Pieraksts konta dzēšana aizņem mazāk par minūti un notiek pilnībā lietotn
 
 Dzēšana likvidē kontu. Tā nav deaktivizēšana vai pauze.
 
+Ja esi salona īpašnieks, dzēšana aizņem ilgāku laiku. Vispirms izpildi 3. sadaļā minētos soļus. Ja Tev ir abonements, dzēšanu var pabeigt tikai pēc apmaksātā perioda beigām.
+
 ## 2. Kā dzēst kontu lietotnē
 
 - Atver Pieraksts lietotni un pieslēdzies.
@@ -107,6 +124,17 @@ Dzēšana likvidē kontu. Tā nav deaktivizēšana vai pauze.
 - Izlasi kopsavilkumu par to, kas tiks dzēsts, un apstiprini.
 
 Tu tiksi nekavējoties izrakstīts, un dzēšana tiek veikta uzreiz. Uz e-pastu saņemsi apstiprinājumu.
+
+Ja esi salona īpašnieks, soļi ir citādi:
+
+- Atver Pieraksts Business lietotni un pieslēdzies.
+- Dodies uz sadaļu Profils un izvēlies Dzēst kontu.
+- Izvēlies Dzēst manu kontu un apstiprini. Tā Tu saglabā dzēšanas pieprasījumu. Pagaidām nekas netiek dzēsts.
+- Izpildi katru soli, ko lietotne rāda kā neizpildītu. Tie ir uzskaitīti 3. sadaļā.
+- Kad visi soļi ir izpildīti, izvēlies Dzēst kontu un salonu un apstiprini.
+- Ja pieslēdzies ar Apple, lietotne lūgs pieslēgties ar Apple vēlreiz. Pēc tam dzēšana sākas.
+
+Līdz pēdējam apstiprinājumam pieprasījumu vari atsaukt. Izvēlies Paturēt kontu. Dzēšana nenoslēdzas pati, kad pēdējais solis ir izpildīts. Tā notiek tikai tad, kad Tu to apstiprini. Lietotne parāda, kad konts ir dzēsts. Salona īpašniekam apstiprinājumu uz e-pastu nesūtām.
 
 ## 3. Kas tiek dzēsts
 
@@ -134,6 +162,8 @@ Visi apstiprinātie nākotnes pieraksti tiek automātiski atcelti. Attiecīgajie
 
 Ja pieraksts ir tuvāko 24 stundu laikā, lūdzu, informē salonu arī tieši, lai tas var piedāvāt laiku citam.
 
+Ja esi salona īpašnieks, konta dzēšana neatceļ Tava salona pierakstus. Dzēšanu nevar pabeigt, kamēr salonam ir kaut viens gaidāms apstiprināts pieraksts. Atcel vai pabeidz katru gaidāmo pierakstu pats.
+
 ## 5. Ko mēs saglabājam un cik ilgi
 
 Neliela daļa datu dzēšanu pārdzīvo — vai nu tāpēc, ka to prasa normatīvie akti, vai tāpēc, ka tie Tevi vairs neidentificē.
@@ -153,9 +183,9 @@ Ja vēlāk reģistrēsies atkārtoti, tas būs jauns konts bez iepriekšējiem d
 
 ## 7. Salonu abonementi
 
-Konta dzēšana neatceļ App Store abonementu. Tos pārvalda Apple, nevis mēs. Atcel to sava Apple ID konta iestatījumos sadaļā Abonementi — pirms vai pēc konta dzēšanas —, citādi tas turpinās atjaunoties.
+Konta dzēšana neatceļ salona abonementu. Atcel to pats Pieraksts Business lietotnē, ekrānā Abonements.
 
-Ja izrakstām salonam rēķinu tieši, informē mūs uz ${COMPANY.supportEmail}, lai varam norēķinu kārtību noslēgt.
+Dzēšanu nevar pabeigt, kamēr par abonementu vēl var iekasēt maksu. Tas attiecas arī uz bezmaksas periodu. Pēc atcelšanas Tev saglabājas pilna piekļuve līdz bezmaksas perioda vai apmaksātā perioda beigām. Dzēšanas pieprasījumu vari saglabāt jau pirms šī datuma. Dzēšanu var pabeigt tikai pēc tā.
 
 ## 8. Ja nevari izmantot iespēju lietotnē
 
