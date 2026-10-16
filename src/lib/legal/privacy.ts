@@ -147,6 +147,7 @@ You may ask us for details of the safeguards in place by writing to ${COMPANY.pr
 - Waitlist contacts — until the Riga launch communication is complete and you have had a reasonable opportunity to use the service, or until you unsubscribe, whichever comes first.
 - Support correspondence — 2 years from the last message.
 - Accounting records for subscriptions and invoices — 5 years, as required by the Latvian Accounting Law.
+- After a salon owner deletes the account, we keep the salon's specialists (names, roles and descriptions), services and prices, working schedule and client list for 5 years. Nobody can open them in the app. Then we delete them with the salon invoices.
 
 Backups are retained on a rolling basis and overwritten within 30 days, so deleted data disappears from backups within that window.
 
@@ -173,7 +174,7 @@ If you believe we have handled your data wrongly, please tell us first so that w
 
 You can delete your account at any time in the app, under your profile settings. This is a full deletion, not a deactivation: your profile, credentials, bookings, notes, reviews and photographs are removed from our live systems, future bookings are cancelled, and the salons concerned are told only that the booking is cancelled.
 
-We keep only what the law obliges us to keep, principally accounting records for salon subscriptions, and we delete that at the end of the statutory period. Backups are overwritten within 30 days.
+We keep only what the law obliges us to keep, principally accounting records for salon subscriptions, and we delete that at the end of the statutory period. One exception applies to salon owners. When a salon owner deletes the account, we keep the salon records listed in section 8 for 5 years. Backups are overwritten within 30 days.
 
 If you cannot use the in-app option, see our [Account Deletion](/legal/account-deletion) page, or write to ${COMPANY.privacyEmail} and we will complete the deletion within 30 days.
 
@@ -346,6 +347,7 @@ Informāciju par piemērotajiem aizsardzības pasākumiem vari lūgt, rakstot uz
 - Gaidītāju saraksta kontakti — līdz Rīgas atvēršanas komunikācija ir pabeigta un Tev ir bijusi saprātīga iespēja pakalpojumu izmantot, vai līdz brīdim, kad atsakies, atkarībā no tā, kas iestājas pirmais.
 - Sarakste ar atbalstu — 2 gadus no pēdējās ziņas.
 - Grāmatvedības ieraksti par abonementiem un rēķiniem — 5 gadus, kā to nosaka Grāmatvedības likums.
+- Pēc tam, kad salona īpašnieks dzēš kontu, salona speciālistus (vārdus, amatus un aprakstus), pakalpojumus un cenas, darba grafiku un klientu sarakstu glabājam 5 gadus. Lietotnē tos neviens nevar atvērt. Pēc tam tos dzēšam kopā ar salona rēķiniem.
 
 Rezerves kopijas tiek uzturētas rotācijā un pārrakstītas 30 dienu laikā, tāpēc dzēstie dati no rezerves kopijām pazūd šajā termiņā.
 
@@ -372,7 +374,7 @@ Ja uzskati, ka esam apstrādājuši Tavus datus nepareizi, lūdzu, vispirms pasa
 
 Kontu jebkurā laikā vari dzēst lietotnē, sadaļā Profils. Tā ir pilnīga dzēšana, nevis deaktivizēšana: profils, piekļuves dati, pieraksti, piezīmes, atsauksmes un fotoattēli tiek izņemti no mūsu darba sistēmām, nākotnes pieraksti tiek atcelti, un attiecīgajiem saloniem tiek paziņots tikai tas, ka pieraksts ir atcelts.
 
-Mēs saglabājam tikai to, kas mums jāglabā normatīvo aktu dēļ, galvenokārt grāmatvedības ierakstus par salonu abonementiem, un dzēšam tos pēc likumā noteiktā termiņa beigām. Rezerves kopijas tiek pārrakstītas 30 dienu laikā.
+Mēs saglabājam tikai to, kas mums jāglabā normatīvo aktu dēļ, galvenokārt grāmatvedības ierakstus par salonu abonementiem, un dzēšam tos pēc likumā noteiktā termiņa beigām. Salonu īpašniekiem ir viens izņēmums. Kad salona īpašnieks dzēš kontu, 8. sadaļā minētos salona ierakstus glabājam 5 gadus. Rezerves kopijas tiek pārrakstītas 30 dienu laikā.
 
 Ja nevari izmantot dzēšanas iespēju lietotnē, skati [Konta dzēšanas](/legal/account-deletion) lapu vai raksti uz ${COMPANY.privacyEmail}, un mēs dzēšanu pabeigsim 30 dienu laikā.
 
