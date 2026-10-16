@@ -59,7 +59,14 @@ If you are a salon owner, deleting your account also deletes your salon. Before 
 - Remove all other salon members, such as admins and employees.
 - Pay any unpaid Boost commission.
 
-The app shows each step that is still open. When the deletion finishes, we erase the salon name, description, logo, gallery, contact details and address. We keep the salon invoices for 5 years (see section 5), with the company name, registration number, VAT number and legal address on them.
+The app shows each step that is still open. When the deletion finishes, we erase the salon name, description, logo, gallery, contact details and address, and all specialist and service photos. We keep the salon invoices for 5 years (see section 5), with the company name, registration number, VAT number and legal address on them.
+
+We also keep these salon records for 5 years. Nobody can open them in the app. After 5 years we delete them together with the invoices.
+
+- The specialists, with their names, roles and descriptions.
+- The services and prices.
+- The working schedule.
+- The salon's client list, with client names and phone numbers.
 
 ## 4. What happens to your upcoming appointments
 
@@ -71,9 +78,10 @@ If you are a salon owner, account deletion does not cancel the bookings at your 
 
 ## 5. What we keep, and for how long
 
-A small amount of data survives deletion, because the law requires it or because it no longer identifies you.
+A small amount of data survives deletion, mostly because the law requires it or because it no longer identifies you.
 
 - Accounting records for salon subscriptions and invoices — 5 years, as required by the Latvian Accounting Law. We cannot delete these earlier.
+- If you are a salon owner, we keep the salon records listed in section 3 for 5 years. Nobody can open them in the app.
 - Records of moderation decisions where your account was restricted for a serious breach — 2 years, so that a banned user cannot simply register again.
 - Aggregated and anonymised statistics, such as how many bookings were made in a month. These contain nothing that can be traced back to you.
 - Backups, until they are overwritten on their normal rotation, which takes up to 30 days.
@@ -154,7 +162,14 @@ Ja esi salona īpašnieks, konta dzēšana likvidē arī Tavu salonu. Pirms dzē
 - Noņem visus pārējos salona dalībniekus, piemēram, administratorus un darbiniekus.
 - Nokārto neapmaksāto Boost komisiju, ja tāda ir.
 
-Lietotne parāda katru vēl neizpildīto soli. Kad dzēšana noslēdzas, mēs izdzēšam salona nosaukumu, aprakstu, logotipu, galeriju, kontaktinformāciju un adresi. Salona rēķinus glabājam 5 gadus (skat. 5. sadaļu), un tajos paliek uzņēmuma nosaukums, reģistrācijas numurs, PVN numurs un juridiskā adrese.
+Lietotne parāda katru vēl neizpildīto soli. Kad dzēšana noslēdzas, mēs izdzēšam salona nosaukumu, aprakstu, logotipu, galeriju, kontaktinformāciju un adresi, kā arī visus speciālistu un pakalpojumu fotoattēlus. Salona rēķinus glabājam 5 gadus (skat. 5. sadaļu), un tajos paliek uzņēmuma nosaukums, reģistrācijas numurs, PVN numurs un juridiskā adrese.
+
+Arī šos salona ierakstus glabājam 5 gadus. Lietotnē tos neviens nevar atvērt. Pēc 5 gadiem tos dzēšam kopā ar rēķiniem.
+
+- Speciālisti ar vārdiem, amatiem un aprakstiem.
+- Pakalpojumi un cenas.
+- Darba grafiks.
+- Salona klientu saraksts ar klientu vārdiem un tālruņa numuriem.
 
 ## 4. Kas notiek ar gaidāmajiem pierakstiem
 
@@ -166,9 +181,10 @@ Ja esi salona īpašnieks, konta dzēšana neatceļ Tava salona pierakstus. Dzē
 
 ## 5. Ko mēs saglabājam un cik ilgi
 
-Neliela daļa datu dzēšanu pārdzīvo — vai nu tāpēc, ka to prasa normatīvie akti, vai tāpēc, ka tie Tevi vairs neidentificē.
+Neliela daļa datu dzēšanu pārdzīvo — galvenokārt tāpēc, ka to prasa normatīvie akti, vai tāpēc, ka tie Tevi vairs neidentificē.
 
 - Grāmatvedības ieraksti par salonu abonementiem un rēķiniem — 5 gadus, kā to nosaka Grāmatvedības likums. Ātrāk tos dzēst nevaram.
+- Ja esi salona īpašnieks, 3. sadaļā uzskaitītos salona ierakstus glabājam 5 gadus. Lietotnē tos neviens nevar atvērt.
 - Ieraksti par moderācijas lēmumiem, ja konts ticis ierobežots par smagu pārkāpumu — 2 gadus, lai izslēgts lietotājs nevarētu vienkārši reģistrēties no jauna.
 - Apkopota un anonimizēta statistika, piemēram, cik pierakstu veikti mēnesī. Tajā nav nekā, ko varētu saistīt ar Tevi.
 - Rezerves kopijas, līdz tās tiek pārrakstītas parastajā rotācijā, kas aizņem līdz 30 dienām.
