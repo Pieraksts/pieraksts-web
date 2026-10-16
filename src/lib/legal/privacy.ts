@@ -31,7 +31,7 @@ This policy covers the Pieraksts mobile application, the website at ${COMPANY.do
 - We collect what we need to run a booking service, and no more.
 - We do not sell your personal data, and we do not use it for advertising.
 - We do not track you across other companies' apps or websites.
-- You can delete your account, and everything in it, from inside the app at any time.
+- You can delete your account from inside the app at any time.
 - Precise location is used only while you are looking at nearby salons, and only if you allow it.
 
 ## 3. What we collect
@@ -81,9 +81,9 @@ If you grant the permission, the app uses your device's location to show salons 
 
 ### 3.7 Subscription data (salons only)
 
-If a salon buys a subscription through Apple's In-App Purchase, Apple processes the payment. We do not receive or store your card number or other payment credentials. We receive a confirmation that the subscription is active, its type, and its renewal or expiry date, so that we can unlock the paid features.
+Salons pay for the salon subscription and for Boost commission through Stripe. The salon owner adds a payment method on a Stripe web page. Stripe processes the payment. We do not receive or store the card number or other payment credentials. We receive from Stripe the status of the subscription and of each payment, the trial and billing period dates, and references to the customer, the subscription and the payment method.
 
-Where we invoice a salon directly outside the app, we process the business's billing details, registration and VAT numbers and the invoice records that accounting law requires us to keep.
+We also process the business's billing details, registration and VAT numbers and the invoice records that accounting law requires us to keep.
 
 ### 3.8 Website waitlist
 
@@ -95,7 +95,7 @@ When you contact us we keep the message, your contact details and our reply, so 
 
 ## 4. What we do not collect
 
-- We do not collect payment card details. Client payments for salon services happen offline, directly between you and the salon, and subscription payments are handled by Apple.
+- We do not collect payment card details. Client payments for salon services happen offline, directly between you and the salon. Stripe processes the salon subscription and Boost payments, and we do not see the card details.
 - We do not use advertising identifiers, and we do not integrate third-party advertising or cross-app tracking software. The App Tracking Transparency prompt therefore does not appear, because we do not track.
 - We do not buy personal data from data brokers.
 - We do not access your contacts, photos library, microphone or calendar, except that the app asks for access to your camera or a single photo when you choose to upload an image.
@@ -118,7 +118,8 @@ We share personal data with the processors below, each under a written data proc
 
 - Supabase — database, authentication, file storage and backend functions. Hosts account, booking, salon and content data.
 - Expo (Expo Application Services) — delivery of push notifications to your device.
-- Apple — App Store distribution, In-App Purchase billing for salon subscriptions, and push notification transport (APNs).
+- Apple — App Store distribution and push notification transport (APNs).
+- Stripe processes payments for salon subscriptions and Boost commission.
 - Vercel — hosting of the ${COMPANY.domain} website and its server logs.
 - Our transactional email provider — delivery of booking, account and waitlist email.
 - Apple Maps and the device's own location services — rendering maps and resolving your position on the device.
@@ -138,15 +139,15 @@ You may ask us for details of the safeguards in place by writing to ${COMPANY.pr
 ## 8. How long we keep it
 
 - Account and profile data — for as long as your account exists, then deleted when you delete the account.
-- Bookings and booking history — for as long as your account exists, and in any event no longer than 3 years after the appointment, which matches the general limitation period for claims in Latvia.
+- Bookings and booking history — for as long as your account exists, then deleted when you delete the account.
 - Reviews and ratings — until you delete them or delete your account.
 - Booking notes containing health information — deleted 12 months after the appointment, or sooner if you delete them.
 - Reports, blocks and moderation records — 2 years from the decision, so that repeat behaviour can be identified.
 - Push tokens — until the token becomes invalid, the app is uninstalled, or the account is deleted.
-- Server and security logs — 12 months.
+- Server and security logs — up to 12 months. Our hosting providers set the exact period.
 - Waitlist contacts — until the Riga launch communication is complete and you have had a reasonable opportunity to use the service, or until you unsubscribe, whichever comes first.
 - Support correspondence — 2 years from the last message.
-- Accounting records for subscriptions and invoices — 5 years, as required by the Latvian Accounting Law.
+- Accounting records for subscriptions and invoices — at least 5 years, as required by the Latvian Accounting Law.
 - After a salon owner deletes the account, we keep the salon's specialists (names, roles and descriptions), services and prices, working schedule and client list for 5 years. Nobody can open them in the app. Then we delete them with the salon invoices.
 
 Backups are retained on a rolling basis and overwritten within 30 days, so deleted data disappears from backups within that window.
@@ -231,7 +232,7 @@ ${COMPANY.legalName} ir šajā politikā aprakstīto personas datu pārzinis.
 - Mēs vācam tikai to, kas nepieciešams rezervāciju pakalpojuma darbībai.
 - Mēs nepārdodam Tavus personas datus un neizmantojam tos reklāmai.
 - Mēs Tevi neizsekojam citu uzņēmumu lietotnēs vai mājaslapās.
-- Savu kontu un visu tā saturu jebkurā laikā vari dzēst pats lietotnē.
+- Savu kontu jebkurā laikā vari dzēst pats lietotnē.
 - Precīzu atrašanās vietu izmantojam tikai brīdī, kad skaties tuvumā esošos salonus, un tikai tad, ja esi to atļāvis.
 
 ## 3. Kādus datus mēs apstrādājam
@@ -281,9 +282,9 @@ Ja atļauj, lietotne izmanto ierīces atrašanās vietu, lai parādītu tuvumā 
 
 ### 3.7 Abonementa dati (tikai saloniem)
 
-Ja salons iegādājas abonementu, izmantojot Apple In-App Purchase, maksājumu apstrādā Apple. Mēs nesaņemam un neglabājam kartes numuru vai citus maksājumu datus. Mēs saņemam apstiprinājumu, ka abonements ir aktīvs, tā veidu un atjaunošanas vai beigu datumu, lai atvērtu maksas funkcijas.
+Saloni maksā par salona abonementu un Boost komisiju, izmantojot Stripe. Maksājuma veidu salona īpašnieks pievieno Stripe tīmekļa lapā. Maksājumu apstrādā Stripe. Mēs nesaņemam un neglabājam kartes numuru vai citus maksājumu datus. No Stripe mēs saņemam abonementa un katra maksājuma statusu, bezmaksas perioda un norēķinu perioda datumus, kā arī atsauces uz klientu, abonementu un maksājuma veidu.
 
-Ja izrakstām salonam rēķinu ārpus lietotnes, mēs apstrādājam uzņēmuma rekvizītus, reģistrācijas un PVN numuru, kā arī rēķinu ierakstus, kas mums jāglabā grāmatvedību regulējošo normatīvo aktu dēļ.
+Mēs apstrādājam arī uzņēmuma rekvizītus, reģistrācijas un PVN numuru, kā arī rēķinu ierakstus, kas mums jāglabā grāmatvedību regulējošo normatīvo aktu dēļ.
 
 ### 3.8 Mājaslapas gaidītāju saraksts
 
@@ -295,7 +296,7 @@ Kad sazinies ar mums, mēs saglabājam ziņu, Tavu kontaktinformāciju un mūsu 
 
 ## 4. Ko mēs nevācam
 
-- Mēs nevācam maksājumu karšu datus. Klientu norēķini par salona pakalpojumiem notiek ārpus lietotnes, tieši ar salonu, bet abonementu maksājumus apstrādā Apple.
+- Mēs nevācam maksājumu karšu datus. Klientu norēķini par salona pakalpojumiem notiek ārpus lietotnes, tieši ar salonu. Salonu abonementu un Boost maksājumus apstrādā Stripe, un kartes datus mēs neredzam.
 - Mēs neizmantojam reklāmas identifikatorus un neintegrējam trešo personu reklāmas vai starplietotņu izsekošanas rīkus. Tāpēc App Tracking Transparency uzvedne netiek rādīta — mēs neizsekojam.
 - Mēs nepērkam personas datus no datu tirgotājiem.
 - Mēs nepiekļūstam Taviem kontaktiem, fotoattēlu bibliotēkai, mikrofonam vai kalendāram; lietotne prasa piekļuvi kamerai vai atsevišķam attēlam tikai tad, kad pats izvēlies augšupielādēt attēlu.
@@ -318,7 +319,8 @@ Personas datus nododam turpmāk minētajiem apstrādātājiem, katram uz rakstis
 
 - Supabase — datubāze, autentifikācija, failu glabātava un backend funkcijas. Glabā kontu, pierakstu, salonu un satura datus.
 - Expo (Expo Application Services) — push paziņojumu piegāde uz Tavu ierīci.
-- Apple — izplatīšana App Store, In-App Purchase norēķini par salonu abonementiem un push paziņojumu transports (APNs).
+- Apple — izplatīšana App Store un push paziņojumu transports (APNs).
+- Stripe apstrādā maksājumus par salonu abonementiem un Boost komisiju.
 - Vercel — mājaslapas ${COMPANY.domain} mitināšana un tās servera žurnāli.
 - Mūsu transakciju e-pasta pakalpojuma sniedzējs — pierakstu, konta un gaidītāju saraksta e-pastu piegāde.
 - Apple Maps un ierīces atrašanās vietas pakalpojumi — karšu attēlošana un pozīcijas noteikšana ierīcē.
@@ -338,15 +340,15 @@ Informāciju par piemērotajiem aizsardzības pasākumiem vari lūgt, rakstot uz
 ## 8. Cik ilgi datus glabājam
 
 - Konta un profila dati — kamēr pastāv konts; tiek dzēsti, dzēšot kontu.
-- Pieraksti un pierakstu vēsture — kamēr pastāv konts, bet ne ilgāk kā 3 gadus pēc pieraksta, kas atbilst vispārējam prasības noilguma termiņam Latvijā.
+- Pieraksti un pierakstu vēsture — kamēr pastāv konts; tiek dzēsti, dzēšot kontu.
 - Atsauksmes un vērtējumi — līdz tos dzēs pats vai dzēsīsi kontu.
 - Pierakstu piezīmes ar veselības informāciju — dzēstas 12 mēnešus pēc pieraksta vai agrāk, ja tās dzēs pats.
 - Ziņojumi, bloķējumi un moderācijas ieraksti — 2 gadus no lēmuma, lai varētu konstatēt atkārtotus pārkāpumus.
 - Push tokeni — līdz tokens kļūst nederīgs, lietotne tiek atinstalēta vai konts tiek dzēsts.
-- Servera un drošības žurnāli — 12 mēnešus.
+- Servera un drošības žurnāli — līdz 12 mēnešiem. Precīzu termiņu nosaka mūsu mitināšanas pakalpojumu sniedzēji.
 - Gaidītāju saraksta kontakti — līdz Rīgas atvēršanas komunikācija ir pabeigta un Tev ir bijusi saprātīga iespēja pakalpojumu izmantot, vai līdz brīdim, kad atsakies, atkarībā no tā, kas iestājas pirmais.
 - Sarakste ar atbalstu — 2 gadus no pēdējās ziņas.
-- Grāmatvedības ieraksti par abonementiem un rēķiniem — 5 gadus, kā to nosaka Grāmatvedības likums.
+- Grāmatvedības ieraksti par abonementiem un rēķiniem — vismaz 5 gadus, kā to nosaka Grāmatvedības likums.
 - Pēc tam, kad salona īpašnieks dzēš kontu, salona speciālistus (vārdus, amatus un aprakstus), pakalpojumus un cenas, darba grafiku un klientu sarakstu glabājam 5 gadus. Lietotnē tos neviens nevar atvērt. Pēc tam tos dzēšam kopā ar salona rēķiniem.
 
 Rezerves kopijas tiek uzturētas rotācijā un pārrakstītas 30 dienu laikā, tāpēc dzēstie dati no rezerves kopijām pazūd šajā termiņā.
