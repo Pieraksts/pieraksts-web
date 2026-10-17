@@ -6,38 +6,10 @@ import { ctaVariants } from "@/components/landing-button";
 import { cn } from "@/lib/utils";
 
 /**
- * Shared chrome for the two PAY-1 billing landing pages.
- *
- * These pages are where the payment provider returns a Salon Owner after web
- * checkout. They are deliberately inert: they hold no Supabase session, no
- * service-role key, and no Stripe key, and they read no state at all.
- *
- * That is why the copy never says the subscription is active. Entitlement is
- * granted only by a verified provider webhook reaching the backend, which may
- * land a moment after the owner is redirected here. Claiming success on this
- * page would be the one place in the system where a payment redirect, rather
- * than a verified event, appeared to grant access.
- *
- * The visual treatment carries the same restraint. The success page is warm but
- * not celebratory, because what happened is "we have your card", not "you are
- * live" — and the owner finds out which in the app, not here.
- *
- * PAY-008 adds one thing and changes none of the above: a link back into the
- * app. Under PAY-1 these pages were where the owner stopped, which is why the
- * app could never tell a cancelled checkout from a closed browser. The link is
- * still just a link — it reports nothing, grants nothing, and the app re-reads
- * canonical server state when it receives it.
- *
- * The page therefore has two genuinely different endings, and both are
- * designed rather than one being the other minus a button:
- *
- * - with an allow-listed return target, the button *is* the way back, so the
- *   text beside it says what happens next instead of repeating the instruction
- *   the button already carries;
- * - without one — the parameter was absent, repeated, or refused by the
- *   allow-list — there is no link this page is permitted to build, so the way
- *   back becomes an explicit, titled instruction rather than a paragraph left
- *   standing where a button used to be.
+ * Shared chrome for the two billing landing pages. The page reads no state,
+ * so the copy never says the plan is active: only the verified provider
+ * webhook grants access. Two endings: with an allow-listed `appReturnUrl` a
+ * button opens the app; without one, a titled block tells the owner to open it.
  */
 export async function BillingOutcomePage({
   outcome,
@@ -45,7 +17,7 @@ export async function BillingOutcomePage({
 }: {
   outcome: "return" | "cancelled";
   /** Already allow-listed by `resolveAppReturnUrl`; `null` when absent or refused. */
-  appReturnUrl?: string | null;
+  appReturnUrl: string | null;
 }) {
   const t = await getTranslations("billing");
   const isReturn = outcome === "return";

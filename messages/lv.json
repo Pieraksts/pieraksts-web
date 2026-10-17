@@ -2,16 +2,13 @@
   "meta": {
     "title": "Pieraksts — Skaistumkopšanas pieraksti Rīgā, bez zvaniem un ziņām",
     "description": "Pieraksts palīdz klientiem atrast reālu salonu pieejamību un saloniem turēt pakalpojumus, speciālistus un pierakstus vienā mierīgā grafikā.",
-    "tagline": "Skaistumkopšanas pieraksti Rīgā, bez zvaniem un ziņām",
     "keywords": "salonu pieraksti Rīgā, skaistumkopšanas pieraksti, frizētava Rīgā, pieraksties tiešsaistē, salonu grafiks, skaistumkopšana Latvijā, Pieraksts"
   },
   "site": {
     "location": "Rīga, Latvija"
   },
   "language": {
-    "label": "Valoda",
-    "lv": "Latviešu",
-    "en": "Angļu"
+    "label": "Valoda"
   },
   "hero": {
     "eyebrow": "Skaistumkopšana un aprūpe · Rīga",
@@ -31,7 +28,6 @@
       "eyebrow": "Klientiem",
       "title": "Atrodi salonu un piesakies dažās minūtēs",
       "description": "Atklāj salonus tuvumā, redzi reālu pieejamību un turi savu rutīnu vienuviet.",
-      "cta": "Pievienoties",
       "points": [
         "Atklāj salonus visā Rīgā pēc pakalpojuma",
         "Redzi reālu pieejamību — bez sarakstes turp un atpakaļ",
@@ -79,8 +75,6 @@
     "title": "Gatavs, tiklīdz Pieraksts atvērsies Rīgā"
   },
   "waitlist": {
-    "openClient": "Pievienoties",
-    "openOwner": "Salonu īpašniekiem",
     "title": "Pievienojies <brand>Pieraksts</brand> gaidītāju sarakstam",
     "subtitle": "Atstāj e-pastu, un ziņosim, tiklīdz atvērsimies Rīgā.",
     "emailLabel": "E-pasts",

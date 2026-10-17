@@ -1,8 +1,7 @@
-/** Locale-independent site constants (brand name, contact links). */
+/** Locale-independent site constants (brand name, site URL, App Store Connect legal URLs). */
 export const siteConfig = {
   name: "Pieraksts",
   url: "https://pieraksts.app",
-  // Signups go through the waitlist form (POST /api/waitlist), not mailto.
   // Absolute URLs — these are what go into App Store Connect. The privacy and
   // support URLs are required for every submission; accountDeletionUrl is
   // required for any app with account creation (Review Guideline 5.1.1(v)).

@@ -29,9 +29,6 @@ export default async function BillingCancelledPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  // PAY-008. This is the link that finally makes `reportCheckoutCancelled()`
-  // reachable in the app: without it, a cancelled checkout looked exactly like
-  // a closed browser.
   const appReturnUrl = resolveAppReturnUrl(
     (await searchParams)[APP_RETURN_QUERY_PARAM]
   );

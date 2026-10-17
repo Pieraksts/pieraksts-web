@@ -4,11 +4,11 @@ import type { LegalDoc } from "./types";
 /**
  * Cookie Policy for the marketing website.
  *
- * The site currently sets only strictly necessary cookies (locale preference,
- * CSRF/session for the waitlist form), which do not require prior consent under
- * the ePrivacy Directive as implemented in Latvia. If analytics, a pixel, or any
- * other non-essential technology is ever added, a consent banner becomes
- * mandatory and section 4 must be updated to list it.
+ * The site sets one strictly necessary cookie, next-intl's NEXT_LOCALE (locale
+ * preference). It needs no prior consent under the ePrivacy Directive as
+ * implemented in Latvia. If analytics, a pixel, or any other non-essential
+ * technology is ever added, a consent banner becomes mandatory and section 4
+ * must be updated to list it.
  */
 export const cookiesDoc: LegalDoc = {
   en: `## 1. What this policy covers

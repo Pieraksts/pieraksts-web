@@ -1,7 +1,7 @@
 "use client";
 
 import { useTransition } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
@@ -10,7 +10,8 @@ import { cn } from "@/lib/utils";
  * Minimal LV / EN toggle. Switching keeps the user on the same page; the
  * default locale (lv) has no URL prefix, English is served from /en.
  */
-export function LanguageSwitcher({ className }: { className?: string }) {
+export function LanguageSwitcher() {
+  const t = useTranslations("language");
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
@@ -18,12 +19,9 @@ export function LanguageSwitcher({ className }: { className?: string }) {
 
   return (
     <div
-      className={cn(
-        "inline-flex items-center rounded-full border border-hairline bg-background p-0.5",
-        className
-      )}
+      className="inline-flex items-center rounded-full border border-hairline bg-background p-0.5"
       role="group"
-      aria-label="Language"
+      aria-label={t("label")}
     >
       {routing.locales.map((l) => {
         const active = l === locale;

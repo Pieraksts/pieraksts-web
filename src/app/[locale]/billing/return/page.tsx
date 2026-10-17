@@ -31,8 +31,6 @@ export default async function BillingReturnPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  // PAY-008. Supplied by the backend through the provider, and allow-listed
-  // before it is rendered.
   const appReturnUrl = resolveAppReturnUrl(
     (await searchParams)[APP_RETURN_QUERY_PARAM]
   );
