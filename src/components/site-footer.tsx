@@ -2,7 +2,6 @@ import { useTranslations } from "next-intl";
 import { BrandMark } from "@/components/brand-mark";
 import { Link } from "@/i18n/navigation";
 import { siteConfig } from "@/lib/site-config";
-import { cn } from "@/lib/utils";
 
 /** Footer legal nav. Mirrors LEGAL_ROUTES in src/lib/legal-content.ts. */
 const LEGAL_LINKS = [
@@ -13,11 +12,11 @@ const LEGAL_LINKS = [
   { href: "/legal/account-deletion", key: "deletion" },
 ] as const;
 
-export function SiteFooter({ className }: { className?: string }) {
+export function SiteFooter() {
   const t = useTranslations();
 
   return (
-    <footer className={cn("border-t border-hairline bg-warm", className)}>
+    <footer className="border-t border-hairline bg-warm">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-5 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-8">
         <div className="flex flex-col gap-2">
           <BrandMark />

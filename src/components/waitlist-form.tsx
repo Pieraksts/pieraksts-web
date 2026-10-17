@@ -12,9 +12,9 @@ const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 type Status = "idle" | "submitting" | "success" | "error";
 
 export function WaitlistForm({
-  defaultRole = "client",
+  defaultRole,
 }: {
-  defaultRole?: WaitlistRole;
+  defaultRole: WaitlistRole;
 }) {
   const t = useTranslations("waitlist");
   const locale = useLocale();

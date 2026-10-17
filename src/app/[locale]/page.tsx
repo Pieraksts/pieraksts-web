@@ -81,7 +81,7 @@ export default async function Home({
         </div>
       </section>
 
-      {/* Showcase — the 3-card stack moved out of the hero into its own section */}
+      {/* Showcase */}
       <Section className="py-14 sm:py-24">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-8">
           <Reveal className="flex flex-col gap-5">

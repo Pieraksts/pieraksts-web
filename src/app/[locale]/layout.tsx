@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Manrope, Inter, Geist_Mono } from "next/font/google";
+import { Manrope, Inter } from "next/font/google";
 import "../globals.css";
 import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/lib/site-config";
@@ -18,12 +18,6 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600"],
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
   display: "swap",
 });
 
@@ -112,7 +106,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${manrope.variable} ${inter.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${manrope.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <NextIntlClientProvider>{children}</NextIntlClientProvider>

@@ -2,16 +2,13 @@
   "meta": {
     "title": "Pieraksts — Beauty bookings in Riga, without calls or DMs",
     "description": "Pieraksts helps clients find real salon availability and helps salon owners keep services, specialists, and bookings in one calm schedule.",
-    "tagline": "Beauty bookings in Riga, without calls or DMs",
     "keywords": "salon booking Riga, beauty appointments, hair salon Riga, book beauty online, salon scheduling, beauty bookings Latvia, Pieraksts"
   },
   "site": {
     "location": "Riga, Latvia"
   },
   "language": {
-    "label": "Language",
-    "lv": "Latvian",
-    "en": "English"
+    "label": "Language"
   },
   "hero": {
     "eyebrow": "Beauty & personal care · Riga",
@@ -31,7 +28,6 @@
       "eyebrow": "For clients",
       "title": "Find a salon and book in minutes",
       "description": "Discover salons near you, see real availability, and keep your routine in one place.",
-      "cta": "Join the waitlist",
       "points": [
         "Discover salons across Riga by service",
         "See real availability — no back-and-forth messages",
@@ -79,8 +75,6 @@
     "title": "Ready when Pieraksts opens in Riga"
   },
   "waitlist": {
-    "openClient": "Join the waitlist",
-    "openOwner": "For salon owners",
     "title": "Join the <brand>Pieraksts</brand> waitlist",
     "subtitle": "Leave your email and we'll let you know the moment Pieraksts opens in Riga.",
     "emailLabel": "Email address",

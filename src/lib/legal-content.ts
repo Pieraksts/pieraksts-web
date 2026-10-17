@@ -13,8 +13,6 @@
  * CONSENT_VERSION in src/lib/consent.ts.
  */
 
-export { COMPANY, COMPANY_ADDRESS_INLINE } from "./legal/company";
-export type { LegalDoc } from "./legal/types";
 export { termsDoc } from "./legal/terms";
 export { privacyDoc } from "./legal/privacy";
 export { cookiesDoc } from "./legal/cookies";
@@ -31,5 +29,3 @@ export const LEGAL_ROUTES = [
   "/legal/community-guidelines",
   "/legal/account-deletion",
 ] as const;
-
-export type LegalRoute = (typeof LEGAL_ROUTES)[number];

@@ -21,7 +21,6 @@ export const COMPANY = {
   privacyEmail: "support@pieraksts.app",
   phoneSupport: "+371 28338094",
   phoneTechnical: "+371 27303530",
-  brand: "Pieraksts",
   domain: "pieraksts.app",
 } as const;
 

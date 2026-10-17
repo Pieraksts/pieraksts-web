@@ -12,13 +12,13 @@ import { cn } from "@/lib/utils";
 
 type WaitlistCtaProps = VariantProps<typeof ctaVariants> & {
   /** Pre-selects the role in the form based on which CTA was clicked. */
-  role?: WaitlistRole;
+  role: WaitlistRole;
   label: string;
   className?: string;
 };
 
 export function WaitlistCta({
-  role = "client",
+  role,
   label,
   variant,
   size,

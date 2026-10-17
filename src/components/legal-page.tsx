@@ -6,7 +6,7 @@ import { LegalDocument } from "@/components/legal-document";
 import { Link } from "@/i18n/navigation";
 import { LEGAL_EFFECTIVE_DATE } from "@/lib/legal-content";
 
-/** Shared chrome for the Terms and Privacy pages. */
+/** Shared chrome for the legal pages. */
 export async function LegalPage({
   title,
   markdown,
