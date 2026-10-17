@@ -21,7 +21,7 @@ export { cookiesDoc } from "./legal/cookies";
 export { guidelinesDoc } from "./legal/guidelines";
 export { deletionDoc } from "./legal/deletion";
 
-export const LEGAL_EFFECTIVE_DATE = "2026-08-31";
+export const LEGAL_EFFECTIVE_DATE = "2026-10-17";
 
 /** Every legal route, in the order they appear in the footer and sitemap. */
 export const LEGAL_ROUTES = [
