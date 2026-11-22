@@ -117,6 +117,36 @@
     },
     "openApp": "Atvērt Pieraksts Business lietotni"
   },
+  "payouts": {
+    "return": {
+      "title": "Pārbaudiet izmaksu kontu lietotnē",
+      "body": "Lietotnē redzams izmaksu konta statuss un dati, kas vēl trūkst.",
+      "nextStep": "Ja kādi dati trūkst, turpiniet iestatīšanu lietotnē.",
+      "nextStepManual": "Atveriet Pieraksts Business lietotni, lai redzētu izmaksu konta statusu. Ja kādi dati trūkst, turpiniet iestatīšanu tur."
+    },
+    "refresh": {
+      "title": "Šī iestatīšanas saite vairs nedarbojas",
+      "body": "Iestatīšanas saite darbojas tikai vienu reizi un īsu laiku. Ar jaunu saiti varat turpināt no vietas, kur apstājāties.",
+      "nextStep": "Kad lietotne atvērsies, tā pieprasīs jaunu saiti.",
+      "nextStepManual": "Atveriet Pieraksts Business lietotni un turpiniet izmaksu iestatīšanu, lai saņemtu jaunu saiti."
+    },
+    "openApp": "Atvērt Pieraksts Business lietotni"
+  },
+  "giftCards": {
+    "return": {
+      "title": "Paldies par pirkumu",
+      "body": "Dāvanu karte tiks nosūtīta e-pastā, kad maksājums būs apstiprināts.",
+      "nextStep": "E-pastā būs dāvanu karte PDF formātā, ko varat izdrukāt.",
+      "nextStepManual": "Atveriet Pieraksts lietotni, lai turpinātu. Dāvanu karte tiks nosūtīta e-pastā, kad maksājums būs apstiprināts."
+    },
+    "cancelled": {
+      "title": "Maksājums netika pabeigts",
+      "body": "Maksa netika ieturēta, un dāvanu karte netika nopirkta.",
+      "nextStep": "Lietotnē varat mēģināt vēlreiz.",
+      "nextStepManual": "Atveriet Pieraksts lietotni, lai mēģinātu vēlreiz."
+    },
+    "openApp": "Atvērt Pieraksts lietotni"
+  },
   "footer": {
     "blurb": "Skaistumkopšanas un aprūpes pierakstu platforma Latvijai, sākot ar Rīgu.",
     "note": "Drīzumā Rīgā.",

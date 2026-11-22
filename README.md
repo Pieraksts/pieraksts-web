@@ -48,6 +48,12 @@ src/
       billing/
         return/page.tsx     # web checkout return (noindex)
         cancelled/page.tsx  # web checkout cancel (noindex)
+      payouts/
+        return/page.tsx     # Payout Account setup return (noindex)
+        refresh/page.tsx    # expired setup link, the app asks for a new one (noindex)
+      gift-cards/
+        return/page.tsx     # Gift Card checkout return (noindex)
+        cancelled/page.tsx  # Gift Card checkout cancel (noindex)
       legal/
         terms-of-service/, privacy-policy/, cookie-policy/,
         community-guidelines/, account-deletion/   # one page.tsx each
@@ -62,7 +68,8 @@ src/
     landing-button.tsx      # ctaVariants, the pill CTA styles
     waitlist-cta.tsx        # CTA button that opens the waitlist dialog (client)
     waitlist-form.tsx       # waitlist form, POSTs to /api/waitlist (client)
-    billing-outcome.tsx     # shared body of the two billing pages
+    outcome-page.tsx        # shared body of the billing, payouts and Gift Card pages
+    outcome-route.tsx       # metadata and page for one landing route
     legal-page.tsx          # shared chrome for the legal pages
     legal-document.tsx      # renders the legal Markdown subset
     reveal.tsx              # scroll-reveal wrapper (IntersectionObserver)
@@ -74,7 +81,7 @@ src/
     legal-content.ts        # legal document exports, effective date, LEGAL_ROUTES
     legal/                  # one module per legal document, plus company.ts
     consent.ts              # waitlist roles and consent version
-    app-return.ts           # allow-lists the billing pages' app_return URL
+    app-return.ts           # allow-lists the landing pages' app_return URL (+ .test.ts)
     utils.ts                # cn()
 ```
 
@@ -96,6 +103,7 @@ holds the same values.
 ```bash
 npm run dev      # http://localhost:3000
 npm run lint
+npm test         # node --test, needs Node 22.18+ for .ts files
 npm run build
 ```
 

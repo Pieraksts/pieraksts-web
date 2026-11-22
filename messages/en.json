@@ -117,6 +117,36 @@
     },
     "openApp": "Open the Pieraksts Business app"
   },
+  "payouts": {
+    "return": {
+      "title": "Check your Payout Account in the app",
+      "body": "The app shows your Payout Account status and any details that are still missing.",
+      "nextStep": "If a detail is missing, continue setup from the app.",
+      "nextStepManual": "Open the Pieraksts Business app to see your Payout Account status. If a detail is missing, continue setup from there."
+    },
+    "refresh": {
+      "title": "This setup link no longer works",
+      "body": "A setup link works only once and for a short time. A new link lets you continue where you stopped.",
+      "nextStep": "When the app opens, it asks for a new link.",
+      "nextStepManual": "Open the Pieraksts Business app and continue payout setup to get a new link."
+    },
+    "openApp": "Open the Pieraksts Business app"
+  },
+  "giftCards": {
+    "return": {
+      "title": "Thank you for your purchase",
+      "body": "The Gift Card is sent by email after the payment is confirmed.",
+      "nextStep": "The email has the Gift Card as a PDF that you can print.",
+      "nextStepManual": "Open the Pieraksts app to continue. The Gift Card is sent by email after the payment is confirmed."
+    },
+    "cancelled": {
+      "title": "Payment was not completed",
+      "body": "Nothing was charged and no Gift Card was bought.",
+      "nextStep": "You can try again in the app.",
+      "nextStepManual": "Open the Pieraksts app to try again."
+    },
+    "openApp": "Open the Pieraksts app"
+  },
   "footer": {
     "blurb": "A beauty and personal care booking marketplace for Latvia, starting in Riga.",
     "note": "Launching soon in Riga.",
